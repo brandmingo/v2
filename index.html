@@ -3,1113 +3,995 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wireframe — Creatix Landing Page · Centered Pill Nav</title>
+<title>Wireframe — Founder Coaching · Curvy Style</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  :root {
-    --wire-bg: #F4F2EE;
-    --wire-surface: #EAE7E0;
-    --wire-border: #B8B2A8;
-    --wire-border-strong: #7A7468;
-    --wire-fill: #D8D3CA;
-    --wire-fill-mid: #C4BEB5;
-    --wire-fill-dark: #A89E90;
-    --wire-fill-darkest: #6B6259;
-    --wire-text: #3A3530;
-    --wire-text-light: #8A8278;
-    --wire-text-lighter: #ABA49A;
-    --wire-accent: #4A6741;
-    --wire-accent-light: rgba(74,103,65,0.12);
-    --wire-red: #8B3A3A;
-    --wire-red-light: rgba(139,58,58,0.1);
-    --wire-blue: #2F4F6E;
-    --wire-blue-light: rgba(47,79,110,0.1);
-    --wire-yellow: #7A6A20;
-    --wire-yellow-light: rgba(122,106,32,0.1);
-    --font-mono: 'DM Mono', monospace;
-    --font-sans: 'DM Sans', sans-serif;
-  }
+:root {
+  --bg: #F0EDE8;
+  --surface: #E8E4DE;
+  --white: #FAFAF8;
+  --border: #C4BEB6;
+  --border-mid: #9E9890;
+  --fill-light: #DDD9D2;
+  --fill-mid: #C8C2B8;
+  --fill-dark: #A09890;
+  --fill-darkest: #706860;
+  --text: #38322E;
+  --text-mid: #7A7268;
+  --text-light: #ACA49A;
+  --green: #4A6A3E;
+  --green-light: rgba(74,106,62,0.12);
+  --red: #8B3A3A;
+  --red-light: rgba(139,58,58,0.1);
+  --blue: #2F4F6E;
+  --blue-light: rgba(47,79,110,0.1);
+  --gold: #7A6020;
+  --gold-light: rgba(122,96,32,0.1);
+  --radius-card: 20px;
+  --radius-pill: 999px;
+  --radius-sm: 10px;
+  --font-mono: 'DM Mono', monospace;
+  --font-sans: 'DM Sans', sans-serif;
+}
 
-  html { scroll-behavior: smooth; }
-  body {
-    background: var(--wire-bg);
-    color: var(--wire-text);
-    font-family: var(--font-sans);
-    font-size: 13px; line-height: 1.5;
-  }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--text); font-family: var(--font-sans); font-size: 13px; line-height: 1.5; }
 
-  /* ── CHROME HEADER ── */
-  .wf-header {
-    background: var(--wire-text); color: #EAE7E0;
-    padding: 14px 32px;
-    display: flex; align-items: center; justify-content: space-between;
-    position: sticky; top: 0; z-index: 200;
-  }
-  .wf-header-title {
-    font-family: var(--font-mono); font-size: 11px;
-    letter-spacing: 0.1em; font-weight: 400;
-    display: flex; align-items: center; gap: 10px;
-  }
-  .wf-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
-  .wf-dot-r { background: #FF6058; }
-  .wf-dot-y { background: #FFBD2E; }
-  .wf-dot-g { background: #27C93F; }
-  .wf-tabs { display: flex; gap: 4px; }
-  .wf-tab {
-    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em;
-    padding: 6px 16px; cursor: pointer;
-    border: 1px solid rgba(255,255,255,0.15);
-    background: transparent; color: rgba(255,255,255,0.5); transition: all 0.2s;
-  }
-  .wf-tab.active { background: rgba(255,255,255,0.12); color: #EAE7E0; border-color: rgba(255,255,255,0.3); }
-  .wf-tab:hover { color: #EAE7E0; }
-  .wf-meta { font-family: var(--font-mono); font-size: 10px; color: rgba(255,255,255,0.35); letter-spacing: 0.08em; }
+/* ── CHROME ── */
+.wf-header {
+  background: var(--text); color: #EAE7E0; padding: 13px 32px;
+  display: flex; align-items: center; justify-content: space-between;
+  position: sticky; top: 0; z-index: 200;
+}
+.wf-header-title { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em; display: flex; align-items: center; gap: 10px; }
+.dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+.dot-r { background: #FF6058; } .dot-y { background: #FFBD2E; } .dot-g { background: #27C93F; }
+.wf-tabs { display: flex; gap: 4px; }
+.wf-tab { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em; padding: 6px 16px; cursor: pointer; border: 1px solid rgba(255,255,255,0.15); background: transparent; color: rgba(255,255,255,0.5); border-radius: 4px; transition: all 0.2s; }
+.wf-tab.active { background: rgba(255,255,255,0.12); color: #EAE7E0; border-color: rgba(255,255,255,0.3); }
+.wf-meta { font-family: var(--font-mono); font-size: 10px; color: rgba(255,255,255,0.35); letter-spacing: 0.08em; }
 
-  /* ── VIEW CONTAINERS ── */
-  .view { display: none; }
-  .view.active { display: block; }
+/* ── VIEWS ── */
+.view { display: none; }
+.view.active { display: block; }
 
-  /* ── PAGE WRAPPER ── */
-  .wf-page { max-width: 1240px; margin: 0 auto; padding: 40px 40px 80px; }
+/* ── PAGE ── */
+.wf-page { max-width: 1200px; margin: 0 auto; padding: 36px 40px 80px; }
 
-  /* ── SECTION WRAPPER ── */
-  .wf-section {
-    margin-bottom: 10px; border: 1.5px solid var(--wire-border);
-    background: white; position: relative;
-  }
-  .wf-section.dark-bg { background: #f0ece6; }
-  .wf-section-inner { padding: 32px; }
-  .wf-section-label {
-    position: absolute; top: -1px; left: -1px;
-    background: var(--wire-text); color: #EAE7E0;
-    font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.18em;
-    font-weight: 500; padding: 3px 10px; text-transform: uppercase;
-  }
-  .wf-section-note {
-    position: absolute; top: -1px; right: -1px;
-    background: var(--wire-accent-light); color: var(--wire-accent);
-    font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.1em;
-    padding: 3px 10px; border-left: 1px solid var(--wire-border);
-    max-width: 420px; text-align: right;
-  }
+/* ── SECTION SHELL — CURVY ── */
+.wf-section {
+  margin-bottom: 14px;
+  border: 1.5px solid var(--border);
+  background: var(--white);
+  border-radius: var(--radius-card);
+  position: relative;
+  overflow: hidden;
+}
+.wf-section.dark-bg { background: var(--surface); }
+.wf-section-inner { padding: 44px 44px 36px; }
 
-  /* ── ATOMS ── */
-  .wf-img {
-    background: var(--wire-fill); border: 1.5px dashed var(--wire-border-strong);
-    display: flex; flex-direction: column; align-items: center; justify-content: center;
-    gap: 8px; position: relative; overflow: hidden;
-  }
-  .wf-img::before, .wf-img::after {
-    content: ''; position: absolute;
-    width: 141%; height: 1px; background: var(--wire-border); opacity: 0.4;
-    top: 50%; left: -20%;
-  }
-  .wf-img::before { transform: rotate(-8deg); }
-  .wf-img::after { transform: rotate(8deg); }
-  .wf-img-label {
-    font-family: var(--font-mono); font-size: 10px; color: var(--wire-border-strong);
-    letter-spacing: 0.12em; position: relative; z-index: 1;
-    background: var(--wire-fill); padding: 4px 10px; border: 1px solid var(--wire-border);
-  }
-  .wf-img-size { font-family: var(--font-mono); font-size: 9px; color: var(--wire-text-lighter); position: relative; z-index: 1; }
+/* Section badge label — pill shaped now */
+.wf-section-label {
+  position: absolute; top: 16px; left: 16px;
+  background: var(--text); color: #EAE7E0;
+  font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.16em;
+  font-weight: 500; padding: 4px 12px;
+  text-transform: uppercase; border-radius: var(--radius-pill);
+}
+.wf-section-note {
+  position: absolute; top: 16px; right: 16px;
+  background: var(--green-light); color: var(--green);
+  font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.08em;
+  padding: 4px 12px; border-radius: var(--radius-pill);
+  max-width: 380px; text-align: right;
+}
 
-  .wf-h1 {
-    height: 80px; background: var(--wire-fill-darkest); border-radius: 1px; margin-bottom: 10px;
-    display: flex; align-items: center; padding: 0 16px;
-    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.1em; color: white; position: relative;
-  }
-  .wf-h1-tag { position: absolute; right: 12px; top: 8px; font-size: 8px; color: rgba(255,255,255,0.45); letter-spacing: 0.15em; }
-  .wf-h2 {
-    height: 52px; background: var(--wire-fill-dark); border-radius: 1px; margin-bottom: 10px;
-    display: flex; align-items: center; padding: 0 16px; width: fit-content; min-width: 300px;
-    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.08em; color: white; position: relative;
-  }
-  .wf-h2.centered { margin-left: auto; margin-right: auto; justify-content: center; }
-  .wf-h2-tag { position: absolute; right: 12px; top: 7px; font-size: 8px; color: rgba(255,255,255,0.45); letter-spacing: 0.12em; }
-  .wf-h3 {
-    height: 28px; background: var(--wire-fill-dark); border-radius: 1px; margin-bottom: 8px;
-    display: flex; align-items: center; padding: 0 12px;
-    font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.06em; color: white;
-  }
-  .wf-eyebrow {
-    height: 18px; background: var(--wire-fill); border-radius: 1px; margin-bottom: 10px;
-    display: flex; align-items: center; padding: 0 10px; width: fit-content;
-    font-family: var(--font-mono); font-size: 8px; letter-spacing: 0.2em; color: var(--wire-accent);
-    border: 1px solid rgba(74,103,65,0.2);
-  }
-  .wf-p {
-    background: var(--wire-fill); border-radius: 1px; margin-bottom: 6px;
-    padding: 10px 12px;
-  }
-  .wf-p-line { height: 7px; background: var(--wire-border); border-radius: 10px; margin-bottom: 5px; }
-  .wf-p-line.full { width: 100%; }
-  .wf-p-line.med { width: 80%; }
-  .wf-p-line.short { width: 58%; }
+/* ── CONTENT ELEMENTS — CURVY ── */
+.wf-h1 {
+  font-family: var(--font-mono); font-size: 16px; font-weight: 500; line-height: 1.45;
+  color: var(--white); background: var(--fill-darkest); padding: 20px 24px;
+  border-radius: var(--radius-card); margin-bottom: 12px; position: relative;
+}
+.wf-h1::after { content: 'H1 · HEADLINE'; position: absolute; top: 10px; right: 14px; font-size: 8px; color: rgba(255,255,255,0.3); letter-spacing: 0.18em; }
 
-  .wf-btn {
-    height: 44px; background: var(--wire-text); display: flex; align-items: center;
-    justify-content: center; font-family: var(--font-mono); font-size: 10px;
-    letter-spacing: 0.18em; color: white; text-transform: uppercase; border-radius: 99px;
-    position: relative; cursor: default;
-  }
-  .wf-btn.outline { background: transparent; border: 2px solid var(--wire-text); color: var(--wire-text); }
-  .wf-btn.green-fill { background: var(--wire-accent); border-radius: 99px; }
-  .wf-btn-tag { position: absolute; right: -1px; top: -18px; font-size: 8px; color: var(--wire-accent); font-family: var(--font-mono); letter-spacing: 0.1em; }
+.wf-h2 {
+  font-family: var(--font-mono); font-size: 13px; font-weight: 500; line-height: 1.45;
+  color: var(--white); background: var(--fill-dark); padding: 14px 20px;
+  border-radius: var(--radius-sm); margin-bottom: 10px; position: relative;
+}
+.wf-h2::after { content: 'H2'; position: absolute; top: 8px; right: 10px; font-size: 8px; color: rgba(255,255,255,0.3); letter-spacing: 0.18em; }
+.wf-h2.centered { text-align: center; }
 
-  .wf-icon {
-    border: 1.5px dashed var(--wire-border-strong); background: var(--wire-fill);
-    border-radius: 1px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;
-  }
-  .wf-icon::after { content: '✦'; font-size: 11px; color: var(--wire-border-strong); }
-  .wf-icon.circle { border-radius: 50%; }
-  .wf-icon.num {
-    border-style: solid; background: var(--wire-fill-darkest); font-family: var(--font-mono);
-    font-size: 14px; color: white; border-radius: 50%;
-  }
-  .wf-icon.num::after { display: none; }
-  .wf-icon.avatar { border-radius: 50%; width: 52px; height: 52px; background: var(--wire-fill-mid); }
+.wf-h3 {
+  font-family: var(--font-mono); font-size: 10.5px; font-weight: 500; line-height: 1.4;
+  color: var(--white); background: var(--fill-dark); padding: 9px 14px;
+  border-radius: var(--radius-sm); margin-bottom: 7px; position: relative;
+}
+.wf-h3::after { content: 'H3'; position: absolute; top: 5px; right: 8px; font-size: 7px; color: rgba(255,255,255,0.28); letter-spacing: 0.18em; }
 
-  .wf-badge {
-    display: inline-flex; align-items: center; gap: 6px;
-    background: var(--wire-fill-darkest); padding: 8px 14px; border-radius: 10px;
-    font-family: var(--font-mono); font-size: 9px; color: white; letter-spacing: 0.08em;
-  }
-  .wf-badge.light { background: white; color: var(--wire-text); border: 1px solid var(--wire-border); }
-  .wf-badge.accent { background: var(--wire-accent); color: white; }
+.wf-body {
+  font-family: var(--font-mono); font-size: 10px; line-height: 1.75; font-weight: 300;
+  color: var(--text-mid); background: var(--fill-light); padding: 12px 16px;
+  border-radius: var(--radius-sm); margin-bottom: 8px; position: relative;
+}
+.wf-body::after { content: 'BODY'; position: absolute; top: 6px; right: 8px; font-size: 7px; color: var(--text-light); letter-spacing: 0.16em; }
 
-  .wf-annot {
-    font-family: var(--font-mono); font-size: 9px; color: var(--wire-accent);
-    letter-spacing: 0.08em; margin: 5px 0 0; display: flex; align-items: center; gap: 5px;
-  }
-  .wf-annot::before { content: '↳'; }
-  .wf-rule {
-    font-family: var(--font-mono); font-size: 9px; color: var(--wire-red);
-    background: var(--wire-red-light); padding: 3px 8px; border-left: 2px solid var(--wire-red);
-    margin: 5px 0; letter-spacing: 0.06em;
-  }
-  .wf-note {
-    font-family: var(--font-mono); font-size: 9px; color: var(--wire-blue);
-    background: var(--wire-blue-light); padding: 3px 8px; border-left: 2px solid var(--wire-blue);
-    margin: 5px 0; letter-spacing: 0.06em;
-  }
-  .wf-warn {
-    font-family: var(--font-mono); font-size: 9px; color: var(--wire-yellow);
-    background: var(--wire-yellow-light); padding: 3px 8px; border-left: 2px solid var(--wire-yellow);
-    margin: 5px 0; letter-spacing: 0.06em;
-  }
-  .wf-spacer {
-    height: 28px; display: flex; align-items: center; justify-content: center; position: relative;
-  }
-  .wf-spacer::before { content: ''; position: absolute; left: 0; right: 0; height: 1px; background: var(--wire-fill); }
-  .wf-spacer-label {
-    font-family: var(--font-mono); font-size: 9px; color: var(--wire-text-lighter);
-    background: white; padding: 0 10px; position: relative; z-index: 1; letter-spacing: 0.15em;
-  }
-  .section-divider { height: 1px; background: var(--wire-fill); margin: 20px 0 8px; }
+.wf-bullet {
+  font-family: var(--font-mono); font-size: 10px; line-height: 1.65;
+  color: var(--text-mid); padding: 9px 14px 9px 28px;
+  border-left: 2px solid var(--border); margin-bottom: 6px;
+  background: var(--white); position: relative;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+.wf-bullet::before { content: '—'; position: absolute; left: 10px; color: var(--border-mid); font-weight: 500; }
+.wf-bullet .bt { font-weight: 500; color: var(--text); display: block; margin-bottom: 1px; }
 
-  /* ── PILL NAV ── */
-  .wf-pill-nav {
-    background: var(--wire-fill-darkest); border-radius: 99px;
-    height: 52px; display: grid; grid-template-columns: 1fr auto 1fr;
-    align-items: center; padding: 0 28px; margin-bottom: 10px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-  }
-  .pill-nav-left, .pill-nav-right { display: flex; align-items: center; gap: 32px; }
-  .pill-nav-right { justify-content: flex-end; }
-  .pill-nav-link { height: 8px; border-radius: 10px; background: rgba(255,255,255,0.2); }
-  .pill-nav-logo {
-    display: flex; align-items: center; gap: 8px;
-    font-family: var(--font-mono); font-size: 12px; color: white; letter-spacing: 0.08em;
-    white-space: nowrap;
-  }
-  .pill-nav-starburst {
-    width: 20px; height: 20px; background: rgba(127,255,0,0.5); border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 10px; color: white;
-  }
+.wf-quote {
+  font-family: var(--font-mono); font-size: 15px; font-weight: 500; line-height: 1.35;
+  color: var(--white); background: var(--fill-darkest); padding: 28px 28px 28px 44px;
+  border-radius: var(--radius-card); position: relative;
+}
+.wf-quote::before { content: '"'; font-size: 52px; position: absolute; top: 10px; left: 16px; color: rgba(255,255,255,0.12); font-family: Georgia, serif; line-height: 1; }
+.wf-quote::after { content: 'BLOCKQUOTE'; position: absolute; bottom: 8px; right: 14px; font-size: 7px; color: rgba(255,255,255,0.2); letter-spacing: 0.2em; }
 
-  /* ── GRIDS ── */
-  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
-  .grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 0; }
-  .split-50-50 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-  .split-60-40 { display: grid; grid-template-columns: 6fr 4fr; gap: 24px; }
-  .split-40-60 { display: grid; grid-template-columns: 4fr 6fr; gap: 24px; }
+.wf-eyebrow {
+  font-family: var(--font-mono); font-size: 9px; font-weight: 400; letter-spacing: 0.25em;
+  text-transform: uppercase; color: var(--green); display: inline-flex; align-items: center;
+  gap: 8px; margin-bottom: 14px; background: var(--green-light);
+  padding: 5px 14px; border-radius: var(--radius-pill);
+}
 
-  /* ── SERVICE ROW ── */
-  .wf-service-row {
-    display: flex; align-items: center; gap: 12px; padding: 14px 16px;
-    border: 1px solid var(--wire-border); margin-bottom: 8px; background: #fafaf8;
-    transition: background 0.15s; cursor: default; border-radius: 6px;
-  }
-  .wf-service-row:hover { background: var(--wire-fill); }
-  .wf-service-num { font-family: var(--font-mono); font-size: 9px; color: var(--wire-text-lighter); width: 20px; }
-  .wf-service-name { flex: 1; height: 8px; background: var(--wire-border); border-radius: 10px; }
-  .wf-service-arrow {
-    width: 28px; height: 28px; border-radius: 50%;
-    border: 1px solid var(--wire-border); display: flex; align-items: center;
-    justify-content: center; font-size: 11px; color: var(--wire-text-lighter);
-  }
+/* ── BUTTONS — PILL ── */
+.wf-btn {
+  height: 48px; background: var(--text); display: flex; align-items: center;
+  justify-content: center; font-family: var(--font-mono); font-size: 10px;
+  letter-spacing: 0.18em; color: var(--white); text-transform: uppercase;
+  border-radius: var(--radius-pill); position: relative; cursor: default;
+}
+.wf-btn.outline { background: transparent; border: 2px solid var(--text); color: var(--text); }
+.wf-btn.full { width: 100%; }
+.wf-btn.green { background: var(--green); }
+.wf-btn-tag { position: absolute; right: 0; top: -18px; font-size: 8px; color: var(--green); font-family: var(--font-mono); letter-spacing: 0.1em; }
 
-  /* ── STAT ITEM ── */
-  .wf-stat {
-    padding: 28px 32px; border-right: 1px solid rgba(255,255,255,0.08);
-    background: var(--wire-fill-darkest);
-  }
-  .wf-stat:last-child { border-right: none; }
-  .wf-stat-num { height: 32px; background: rgba(255,255,255,0.25); border-radius: 2px; margin-bottom: 8px; }
-  .wf-stat-label { height: 8px; width: 70%; background: rgba(255,255,255,0.1); border-radius: 10px; }
+/* ── IMAGE PLACEHOLDER — ROUNDED ── */
+.wf-img {
+  background: var(--fill-light); border: 1.5px dashed var(--border-mid);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 8px; position: relative; overflow: hidden;
+  border-radius: var(--radius-card);
+}
+.wf-img::before, .wf-img::after {
+  content: ''; position: absolute; width: 141%; height: 1px; background: var(--border); opacity: 0.35; top: 50%; left: -20%;
+}
+.wf-img::before { transform: rotate(-8deg); }
+.wf-img::after { transform: rotate(8deg); }
+.wf-img-label { font-family: var(--font-mono); font-size: 9px; color: var(--border-mid); letter-spacing: 0.12em; position: relative; z-index: 1; background: var(--fill-light); padding: 3px 10px; border-radius: var(--radius-pill); border: 1px solid var(--border); }
+.wf-img-note { font-family: var(--font-mono); font-size: 8px; color: var(--text-light); position: relative; z-index: 1; text-align: center; padding: 0 20px; }
 
-  /* ── TEAM CARD ── */
-  .wf-team-card {
-    border: 1px solid var(--wire-border); border-radius: 10px; padding: 20px;
-    background: #fafaf8; position: relative;
-  }
-  .wf-team-num {
-    position: absolute; top: 12px; right: 14px; width: 24px; height: 24px;
-    border-radius: 50%; background: var(--wire-fill); border: 1px solid var(--wire-border);
-    display: flex; align-items: center; justify-content: center;
-    font-family: var(--font-mono); font-size: 9px; color: var(--wire-text-lighter);
-  }
+/* ── ANNOTATION CHIPS ── */
+.wf-annot { font-family: var(--font-mono); font-size: 9px; color: var(--green); letter-spacing: 0.08em; margin: 6px 0 0; display: flex; align-items: center; gap: 5px; }
+.wf-annot::before { content: '↳'; }
+.wf-rule { font-family: var(--font-mono); font-size: 9px; color: var(--red); background: var(--red-light); padding: 4px 10px; border-radius: var(--radius-pill); margin: 5px 0; letter-spacing: 0.06em; display: inline-flex; }
+.wf-note { font-family: var(--font-mono); font-size: 9px; color: var(--blue); background: var(--blue-light); padding: 4px 10px; border-radius: var(--radius-pill); margin: 5px 0; letter-spacing: 0.06em; display: inline-flex; }
+.wf-opt { font-family: var(--font-mono); font-size: 9px; color: var(--gold); background: var(--gold-light); padding: 4px 10px; border-radius: var(--radius-pill); margin: 5px 0; letter-spacing: 0.06em; display: inline-flex; }
+.spec-bar { font-family: var(--font-mono); font-size: 9px; color: var(--text-light); padding: 4px 0; }
+.section-divider { height: 1px; background: var(--fill-light); margin: 20px 0 10px; border-radius: 1px; }
 
-  /* ── TESTI CARD ── */
-  .wf-testi-card {
-    border: 1px solid var(--wire-border); border-radius: 14px; padding: 24px; background: white;
-  }
+/* ── PILL NAV ── */
+.pill-nav {
+  background: var(--fill-darkest); border-radius: var(--radius-pill);
+  height: 54px; display: grid; grid-template-columns: 1fr auto 1fr;
+  align-items: center; padding: 0 32px; margin-bottom: 14px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.18);
+}
+.nav-left, .nav-right { display: flex; align-items: center; gap: 36px; }
+.nav-right { justify-content: flex-end; }
+.nav-link { font-family: var(--font-mono); font-size: 11px; color: rgba(255,255,255,0.55); letter-spacing: 0.04em; }
+.nav-center { display: flex; align-items: center; gap: 9px; font-family: var(--font-mono); font-size: 13px; color: var(--white); font-weight: 500; white-space: nowrap; }
+.nav-star { width: 22px; height: 22px; background: rgba(201,169,110,0.55); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; }
 
-  /* ── MARQUEE STRIP ── */
-  .wf-marquee-strip {
-    background: var(--wire-fill-darkest); padding: 20px 0; overflow: hidden;
-    display: flex; align-items: center; gap: 0;
-  }
-  .wf-marquee-items {
-    display: flex; gap: 0; width: 100%;
-  }
-  .wf-marquee-item {
-    flex: 1; height: 28px; background: rgba(255,255,255,0.1); border-radius: 1px;
-    margin: 0 12px;
-  }
+/* ── LAYOUT GRIDS ── */
+.split-60-40 { display: grid; grid-template-columns: 60fr 40fr; gap: 24px; }
+.split-50-50 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.split-40-60 { display: grid; grid-template-columns: 40fr 60fr; gap: 24px; }
+.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+.grid-2x2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 
-  /* ── TICKER STRIP ── */
-  .wf-ticker-strip {
-    border-top: 1px solid var(--wire-border); border-bottom: 1px solid var(--wire-border);
-    padding: 14px 0; display: flex; gap: 0; overflow: hidden;
-  }
-  .wf-ticker-item {
-    display: flex; align-items: center; gap: 8px; padding: 0 20px; flex-shrink: 0;
-  }
-  .wf-ticker-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--wire-accent); }
-  .wf-ticker-text { width: 60px; height: 7px; background: var(--wire-border); border-radius: 10px; }
+/* ── COMPARISON TABLE — CURVY ── */
+.comp-wrap { max-width: 860px; margin: 0 auto; border-radius: var(--radius-card); overflow: hidden; border: 1.5px solid var(--border); }
+.comp-headers { display: grid; grid-template-columns: 1fr 52px 1fr; }
+.comp-hdr { padding: 16px 24px; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 500; }
+.comp-hdr.bad { background: var(--fill-light); color: var(--text-mid); }
+.comp-hdr.good { background: var(--fill-darkest); color: var(--white); }
+.comp-hdr.mid { background: var(--fill-mid); display: flex; align-items: center; justify-content: center; }
+.vs-pill { width: 32px; height: 32px; background: var(--fill-darkest); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 9px; }
+.comp-rows { display: grid; grid-template-columns: 1fr 52px 1fr; }
+.comp-cell { padding: 14px 22px; font-family: var(--font-mono); font-size: 10px; line-height: 1.65; border-top: 1px solid var(--fill-light); display: flex; align-items: flex-start; gap: 10px; }
+.comp-cell.bad { background: var(--white); color: var(--text-mid); }
+.comp-cell.good { background: #F5F4F0; color: var(--text); font-weight: 500; }
+.comp-cell.div { background: var(--fill-light); border-top: 1px solid var(--border); }
+.cx { color: var(--red); font-size: 12px; flex-shrink: 0; margin-top: 1px; }
+.ck { color: var(--green); font-size: 12px; flex-shrink: 0; margin-top: 1px; }
 
-  /* ── CHECK ITEM ── */
-  .wf-check-item { display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start; }
-  .wf-check-box {
-    width: 18px; height: 18px; flex-shrink: 0; border: 1.5px solid var(--wire-border-strong);
-    background: var(--wire-fill); border-radius: 1px; display: flex; align-items: center;
-    justify-content: center; font-size: 10px; color: var(--wire-accent); margin-top: 1px;
-  }
+/* ── PHIL CARDS — CURVY ── */
+.phil-card {
+  background: var(--white); border: 1.5px solid var(--border); border-radius: var(--radius-card);
+  padding: 32px 28px; position: relative; overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+.phil-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+.card-num {
+  font-family: var(--font-mono); font-size: 72px; font-weight: 300;
+  color: rgba(0,0,0,0.05); position: absolute; top: 12px; right: 16px;
+  line-height: 1; letter-spacing: -0.04em;
+}
+.card-icon {
+  width: 52px; height: 52px; border: 1.5px dashed var(--border-mid);
+  background: var(--fill-light); border-radius: var(--radius-sm);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px; color: var(--border-mid); margin-bottom: 20px;
+}
+.card-tag {
+  display: inline-flex; margin-top: 20px;
+  font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--green); background: var(--green-light);
+  padding: 3px 10px; border-radius: var(--radius-pill);
+}
 
-  /* ── FOOTER COLS ── */
-  .wf-footer-bg { background: var(--wire-accent); }
-  .wf-footer-col-title { height: 10px; background: rgba(0,0,0,0.3); border-radius: 10px; width: 60%; margin-bottom: 12px; }
-  .wf-footer-link { height: 7px; background: rgba(0,0,0,0.15); border-radius: 10px; margin-bottom: 7px; }
-  .wf-footer-link.short { width: 55%; }
-  .wf-footer-link.med { width: 75%; }
-  .wf-footer-link.full { width: 100%; }
+/* ── PAIN CARDS — CURVY ── */
+.pain-card {
+  background: var(--white); border: 1.5px solid var(--border);
+  border-radius: var(--radius-card); padding: 24px; position: relative;
+}
+.pain-badge {
+  position: absolute; top: 14px; right: 14px;
+  font-family: var(--font-mono); font-size: 8px; color: var(--text-light);
+  background: var(--fill-light); padding: 3px 8px; border-radius: var(--radius-pill);
+  letter-spacing: 0.12em;
+}
+.pain-icon-circle {
+  width: 36px; height: 36px; border-radius: 50%;
+  border: 1.5px dashed var(--border-mid); background: var(--fill-light);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px; color: var(--red); margin-bottom: 14px;
+}
 
-  /* MOBILE-only */
-  #view-mobile .wf-page { max-width: 390px; padding: 20px 20px 60px; }
-  #view-mobile .wf-section-inner { padding: 24px; }
+/* ── TIMELINE — CURVY ── */
+.timeline { max-width: 680px; margin: 0 auto; position: relative; }
+.tl-line {
+  position: absolute; left: 24px; top: 24px; bottom: 24px;
+  width: 2px; background: linear-gradient(to bottom, var(--fill-darkest), var(--fill-light));
+  border-radius: 2px;
+}
+.tl-step { display: flex; gap: 28px; margin-bottom: 36px; position: relative; }
+.tl-step:last-child { margin-bottom: 0; }
+.tl-node {
+  width: 48px; height: 48px; border-radius: 50%;
+  background: var(--fill-darkest); color: var(--white);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-mono); font-size: 13px; flex-shrink: 0;
+  position: relative; z-index: 1; box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+.tl-content { flex: 1; padding-top: 8px; }
+.tl-step-label {
+  font-family: var(--font-mono); font-size: 8px; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--green); margin-bottom: 6px;
+  background: var(--green-light); display: inline-flex; padding: 2px 8px; border-radius: var(--radius-pill);
+}
+.tl-pill { font-family: var(--font-mono); font-size: 8px; padding: 3px 10px; border: 1px solid var(--border); color: var(--text-mid); border-radius: var(--radius-pill); display: inline-flex; }
 
-  /* Vertical timeline */
-  .vt-step { display: flex; gap: 14px; margin-bottom: 0; }
-  .vt-left { display: flex; flex-direction: column; align-items: center; }
-  .vt-line { width: 1.5px; flex: 1; background: var(--wire-border); min-height: 32px; margin-top: 4px; }
+/* ── CHECK ITEM ── */
+.check-item { display: flex; gap: 14px; margin-bottom: 16px; align-items: flex-start; }
+.check-circle {
+  width: 24px; height: 24px; flex-shrink: 0; border-radius: 50%;
+  border: 1.5px solid var(--border-mid); background: var(--fill-light);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; color: var(--green); margin-top: 2px;
+}
+.check-body { flex: 1; }
 
-  /* email form row */
-  .wf-email-form { display: flex; gap: 8px; }
-  .wf-email-input {
-    flex: 1; height: 44px; background: var(--wire-fill); border: 1px solid var(--wire-border);
-    border-radius: 99px; font-family: var(--font-mono); font-size: 9px; color: var(--wire-text-lighter);
-    display: flex; align-items: center; padding: 0 14px;
-  }
-  .wf-email-input::after { content: 'email input placeholder'; }
+/* ── CALLOUT BOX — CURVY ── */
+.callout-box {
+  border: 2px solid var(--fill-darkest); border-radius: var(--radius-card);
+  background: var(--white); padding: 20px 28px; display: flex; align-items: center; gap: 18px;
+  margin-top: 14px;
+}
+.callout-icon {
+  width: 44px; height: 44px; border-radius: 50%; flex-shrink: 0;
+  border: 1.5px dashed var(--border-mid); background: var(--fill-light);
+  display: flex; align-items: center; justify-content: center; font-size: 18px; color: var(--border-mid);
+}
+
+/* ── CLOSING DARK ── */
+.closing-dark {
+  background: var(--fill-darkest); border-radius: var(--radius-card);
+  padding: 60px 80px; text-align: center;
+}
+
+/* ── OPTION TAG ── */
+.opt-tag {
+  display: inline-flex; font-family: var(--font-mono); font-size: 8px; letter-spacing: 0.15em;
+  background: var(--gold-light); color: var(--gold); border: 1px solid rgba(122,96,32,0.2);
+  padding: 3px 10px; border-radius: var(--radius-pill); margin-bottom: 8px; text-transform: uppercase;
+}
+
+/* MOBILE */
+#view-mobile .wf-page { max-width: 390px; padding: 20px 20px 60px; }
+#view-mobile .wf-section-inner { padding: 44px 20px 20px; }
+#view-mobile .wf-h1 { font-size: 13px; padding: 16px 18px; }
+#view-mobile .wf-h2 { font-size: 11px; }
+
+/* Vertical timeline */
+.vt-step { display: flex; gap: 14px; margin-bottom: 24px; }
+.vt-left { display: flex; flex-direction: column; align-items: center; }
+.vt-line-v { width: 2px; flex: 1; background: var(--border); min-height: 28px; margin-top: 4px; border-radius: 2px; }
+
+/* Input */
+.wf-input { height: 48px; background: var(--fill-light); border: 1.5px solid var(--border); border-radius: var(--radius-pill); flex: 1; display: flex; align-items: center; padding: 0 18px; font-family: var(--font-mono); font-size: 9px; color: var(--text-light); }
+.wf-input::after { content: 'email input placeholder'; }
 </style>
 </head>
 <body>
 
-<!-- CHROME HEADER -->
+<!-- CHROME -->
 <div class="wf-header">
   <div class="wf-header-title">
-    <span class="wf-dot wf-dot-r"></span>
-    <span class="wf-dot wf-dot-y"></span>
-    <span class="wf-dot wf-dot-g"></span>
-    &nbsp;&nbsp;WIREFRAME — Creatix Landing Page · Centered Pill Nav · v2.0
+    <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+    &nbsp;&nbsp;WIREFRAME — Founder Executive Coaching · Curvy Style · v4.0
   </div>
   <div class="wf-tabs">
     <div class="wf-tab active" onclick="switchView('desktop',this)">Desktop 1440px</div>
     <div class="wf-tab" onclick="switchView('mobile',this)">Mobile 390px</div>
   </div>
-  <div class="wf-meta">10 Sections · Pill Nav · All layouts annotated</div>
+  <div class="wf-meta">7 Sections · Real Copy · Rounded UI</div>
 </div>
 
-<!-- ════════════════════════════════════
-     DESKTOP VIEW
-════════════════════════════════════ -->
+
+<!-- ══════════════════════════ DESKTOP ══════════════════════════ -->
 <div id="view-desktop" class="view active">
 <div class="wf-page">
 
-  <!-- ─── PILL NAV ─── -->
-  <div class="wf-pill-nav">
-    <div class="pill-nav-left">
-      <div class="pill-nav-link" style="width:60px;"></div>
-      <div class="pill-nav-link" style="width:52px;"></div>
+  <!-- PILL NAV -->
+  <div class="pill-nav">
+    <div class="nav-left">
+      <span class="nav-link">About Us</span>
+      <span class="nav-link">Services</span>
     </div>
-    <div class="pill-nav-logo">
-      <div class="pill-nav-starburst">✳</div>
-      Stage & Spotlight
+    <div class="nav-center">
+      <div class="nav-star">✦</div>
+      Stage&Spotlight.
     </div>
-    <div class="pill-nav-right">
-      <div class="pill-nav-link" style="width:52px;"></div>
-      <div class="pill-nav-link" style="width:48px;"></div>
+    <div class="nav-right">
+      <span class="nav-link">Process</span>
+      <span class="nav-link">Apply</span>
     </div>
   </div>
-  <div class="wf-note" style="margin-bottom:12px;">PILL NAV · Black bg · Border-radius 99px · Fixed top-center · Grid: [left links] [LOGO CENTER] [right links] · Max-width ~860px · Floats above page</div>
-  <div class="wf-annot" style="margin-bottom:16px;">Left: "About Us · Services" &nbsp;·&nbsp; Center: ✳ Creatix logo &nbsp;·&nbsp; Right: "Projects · Reviews"</div>
+  <div class="wf-note" style="margin-bottom:12px;display:block;">PILL NAV · border-radius 999px · Fixed top-center · 3-col grid: [links] [✦ LOGO] [links] · Dark fill · Shadow</div>
 
   <!-- ─── §1 HERO ─── -->
   <div class="wf-section" id="s1">
-    <div class="wf-section-label">§1 · HERO SECTION</div>
-    <div class="wf-section-note">50/50 split · content left · illustrated person right · off-white bg</div>
-    <div style="height:16px;"></div>
+    <div class="wf-section-label">§1 · HERO</div>
+    <div class="wf-section-note">60/40 · content left · portrait right · dark bg</div>
+    <div style="height:24px;"></div>
     <div class="wf-section-inner">
-      <div class="split-50-50" style="min-height:540px; align-items:center;">
+      <div class="split-60-40" style="min-height:500px; align-items:center;">
+
         <!-- LEFT -->
-        <div style="display:flex;flex-direction:column;justify-content:center;padding-right:20px;">
-          <div class="wf-eyebrow">✳ Creative Agency · Est. 2014</div>
-          <div class="wf-h1" style="height:96px;line-height:1.2;">H1 — "Empowering Brands Through Creative Solutions"
-            <span class="wf-h1-tag">H1 · 52–64px · Display Bold</span>
+        <div style="display:flex;flex-direction:column;justify-content:center;gap:0;">
+          <div class="wf-eyebrow">✦ &nbsp;Invitation Only · Series A &amp; B Founders</div>
+
+          <div class="opt-tag">Option 1</div>
+          <div class="wf-h1" style="margin-bottom:8px;">
+            "They've Seen Your Deck.<br>Now, Make Them Believe in the Pilot."
           </div>
-          <div class="wf-note">H1 spans 3 lines. Bold display weight. "Creative" word gets green accent color.</div>
-          <div class="wf-p" style="margin:12px 0 24px;">
-            <div class="wf-p-line full"></div>
-            <div class="wf-p-line full"></div>
-            <div class="wf-p-line med"></div>
-            <div style="font-size:8px;color:var(--wire-text-lighter);margin-top:6px;font-family:var(--font-mono);">BODY COPY · 15px · 3 lines · max-width ~380px</div>
+          <div class="wf-body" style="margin-bottom:18px;">
+            Stop reciting features. Master the art of The Founder Narrative with 1:1 elite communication coaching designed to turn skeptics into stakeholders.
           </div>
-          <div style="display:flex;gap:12px;align-items:center;">
-            <div style="position:relative;width:180px;">
-              <div class="wf-btn" style="width:180px;border-radius:99px;">[ START YOUR PROJECT ]</div>
-              <div class="wf-btn-tag">PRIMARY CTA · Dark · Pill shape</div>
+
+          <div class="opt-tag">Option 2 — Recommended</div>
+          <div class="wf-h1" style="font-size:13px;padding:14px 20px;margin-bottom:8px;">
+            "Your Series A Isn't Won in the Slides.<br>It's Won in the Q&amp;A."
+          </div>
+          <div class="wf-body" style="margin-bottom:24px;">
+            A great product opens the door. But the founder's vision? That's what writes the check. Build the high-stakes communication skills that scale companies.
+          </div>
+
+          <div class="wf-opt" style="display:inline-flex;">2 options — choose one before final handoff. Option 2 recommended.</div>
+
+          <div style="display:flex;gap:12px;margin-top:18px;align-items:center;flex-wrap:wrap;">
+            <div style="position:relative;width:200px;">
+              <div class="wf-btn" style="width:200px;">[ APPLY NOW → ]</div>
+              <div class="wf-btn-tag">PRIMARY CTA · Pill shape</div>
             </div>
-            <div class="wf-btn outline" style="width:180px;">[ LET'S COLLABORATE → ]</div>
+            <div style="font-family:var(--font-mono);font-size:9px;color:var(--text-light);background:var(--fill-light);padding:6px 14px;border-radius:var(--radius-pill);">7 spots · Confidential</div>
           </div>
-          <div class="wf-annot">2 CTAs side-by-side · primary dark fill + secondary outline · both pill-shaped</div>
+          <div class="wf-annot">Single CTA only above fold · no competing links</div>
         </div>
-        <!-- RIGHT — Person + floating badges -->
-        <div style="position:relative;display:flex;justify-content:center;align-items:flex-end;min-height:480px;">
-          <!-- Circle bg -->
-          <div style="position:absolute;width:340px;height:340px;border-radius:50%;background:var(--wire-fill);bottom:0;left:50%;transform:translateX(-50%);z-index:0;"></div>
-          <!-- Person placeholder -->
-          <div class="wf-img" style="width:280px;height:420px;border-radius:140px 140px 80px 80px;position:relative;z-index:1;background:var(--wire-fill-mid);">
-            <div class="wf-img-label">PERSON · illustrated</div>
-            <div class="wf-img-size">Excited pose · B&W or illustrated · tall portrait</div>
+
+        <!-- RIGHT — portrait -->
+        <div style="position:relative;display:flex;justify-content:center;align-items:flex-end;min-height:460px;">
+          <div class="wf-img" style="width:100%;height:460px;">
+            <div class="wf-img-label">B&amp;W EXECUTIVE PORTRAIT</div>
+            <div class="wf-img-note">High-contrast · Focused expression · Full bleed · 2:3 ratio</div>
           </div>
-          <!-- Badge: 10 Years Experience -->
-          <div class="wf-badge" style="position:absolute;bottom:32px;right:0px;z-index:2;flex-direction:column;align-items:flex-start;gap:2px;">
-            <span style="font-size:16px;font-weight:600;">10</span>
-            <span style="font-size:8px;color:rgba(255,255,255,0.5);">Years Experience</span>
-          </div>
-          <!-- Badge: Stars -->
-          <div class="wf-badge light" style="position:absolute;top:24px;right:-8px;z-index:2;">
-            ★★★★★
-          </div>
-          <!-- Badge: Innovate tag -->
-          <div class="wf-badge" style="position:absolute;bottom:16px;left:-8px;z-index:2;font-size:8px;">
-            Innovate Your Brand →
-          </div>
-          <div class="wf-annot" style="position:absolute;bottom:-20px;left:0;right:0;text-align:center;">Floating badges overlap portrait edges — positioned absolute</div>
         </div>
       </div>
+
       <div class="section-divider"></div>
-      <div style="font-family:var(--font-mono);font-size:9px;color:var(--wire-text-lighter);">📐 50/50 split · Off-white bg · 100vh min-height · Circle SVG behind person · 3 floating badges</div>
+      <div class="spec-bar">📐 60/40 col · 100vh · Dark bg · Pill eyebrow label · Pill CTA button</div>
     </div>
   </div>
 
-  <!-- ─── §2 STATS BAR ─── -->
-  <div class="wf-section dark-bg" id="s2">
-    <div class="wf-section-label">§2 · STATS BAR</div>
-    <div class="wf-section-note">4-column equal grid · dark bg · full bleed width</div>
-    <div style="height:16px;"></div>
-    <div class="wf-section-inner" style="padding:0;">
-      <div class="grid-4">
-        <div class="wf-stat"><div class="wf-stat-num"></div><div class="wf-stat-label"></div></div>
-        <div class="wf-stat"><div class="wf-stat-num"></div><div class="wf-stat-label"></div></div>
-        <div class="wf-stat"><div class="wf-stat-num"></div><div class="wf-stat-label"></div></div>
-        <div class="wf-stat"><div class="wf-stat-num"></div><div class="wf-stat-label"></div></div>
+
+  <!-- ─── §2 COMPARISON ─── -->
+  <div class="wf-section" id="s2">
+    <div class="wf-section-label">§2 · COMPARISON</div>
+    <div class="wf-section-note">Centered H2 · rounded 2-col table · ✕/✓ icons · right col bolder</div>
+    <div style="height:24px;"></div>
+    <div class="wf-section-inner">
+
+      <div class="wf-h2 centered" style="max-width:600px;margin:0 auto 32px;">"The 'Demo Day' Trap vs. Your 1:1 Private Edge"</div>
+
+      <div class="comp-wrap">
+        <div class="comp-headers">
+          <div class="comp-hdr bad">⊘ &nbsp; The Generic Workshop</div>
+          <div class="comp-hdr mid"><div class="vs-pill">vs</div></div>
+          <div class="comp-hdr good">✦ &nbsp; Your 1:1 Private Edge</div>
+        </div>
+        <div class="comp-rows">
+          <div class="comp-cell bad"><span class="cx">✕</span>One-size-fits-all pitch scripts.</div>
+          <div class="comp-cell div"></div>
+          <div class="comp-cell good"><span class="ck">✓</span>Frameworks built around your unique "Founder DNA."</div>
+
+          <div class="comp-cell bad"><span class="cx">✕</span>You're one of 50 founders in a cohort.</div>
+          <div class="comp-cell div"></div>
+          <div class="comp-cell good"><span class="ck">✓</span>Deep-dive sessions focused solely on your roadmap.</div>
+
+          <div class="comp-cell bad"><span class="cx">✕</span>Surface-level feedback on "deck design."</div>
+          <div class="comp-cell div"></div>
+          <div class="comp-cell good"><span class="ck">✓</span>Iterative drills on handling "Aggressive Investor" Q&amp;A.</div>
+        </div>
       </div>
-    </div>
-    <div style="padding:8px 32px 12px;font-family:var(--font-mono);font-size:9px;color:var(--wire-text-lighter);">
-      Large display number (with + in green) · small label below · vertical dividers between columns · dark bg block
+
+      <div class="wf-annot">Table corners rounded (border-radius 20px) · right col has darker bg + bolder text · VS badge centered</div>
+      <div class="section-divider"></div>
+      <div class="spec-bar">📐 50/50 · white bg · max-width ~860px centered · rounded overflow table</div>
     </div>
   </div>
 
-  <!-- ─── §3 ABOUT ─── -->
+
+  <!-- ─── §3 PHILOSOPHY ─── -->
   <div class="wf-section" id="s3">
-    <div class="wf-section-label">§3 · ABOUT / IDEAS INTO MASTERPIECES</div>
-    <div class="wf-section-note">50/50 split · text left · dual image grid right · off-white bg</div>
-    <div style="height:16px;"></div>
+    <div class="wf-section-label">§3 · PERSUASION DNA</div>
+    <div class="wf-section-note">Centered H2 + intro · 3-col rounded cards · geometric icon + copy</div>
+    <div style="height:24px;"></div>
     <div class="wf-section-inner">
-      <div class="split-50-50" style="align-items:center;">
-        <!-- Left -->
-        <div style="padding-right:20px;">
-          <div class="wf-h2">"Turning Ideas Into Masterpieces" <span class="wf-h2-tag">H2</span></div>
-          <div class="wf-p" style="margin:14px 0;">
-            <div class="wf-p-line full"></div>
-            <div class="wf-p-line full"></div>
-            <div class="wf-p-line full"></div>
-            <div class="wf-p-line med"></div>
-          </div>
-          <div class="wf-badge" style="display:inline-flex;margin-top:4px;">A CREATIVE DESIGN AGENCY</div>
-          <div class="wf-annot">Badge pill · dark bg · green accent text or icon · inline at bottom of copy</div>
-        </div>
-        <!-- Right: 2 images -->
-        <div style="display:grid;grid-template-columns:5fr 4fr;gap:12px;">
-          <div class="wf-img" style="height:320px;border-radius:12px;">
-            <div class="wf-img-label">TEAM AT WORK</div>
-            <div class="wf-img-size">Photo/illustration · dark tones</div>
-            <div style="position:absolute;bottom:12px;left:12px;z-index:2;" class="wf-badge accent" style="font-size:8px;">A CREATIVE DESIGN AGENCY</div>
-          </div>
-          <div class="wf-img" style="height:320px;border-radius:12px;">
-            <div class="wf-img-label">PERSON THINKING</div>
-            <div class="wf-img-size">Portrait · thinking pose</div>
-          </div>
+
+      <div style="text-align:center;max-width:680px;margin:0 auto 44px;">
+        <div class="wf-h2 centered">"What do Steve Jobs and Sara Blakely have in common?"</div>
+        <div class="wf-body" style="text-align:left;margin-top:10px;">
+          They didn't just sell products; they sold a future that felt inevitable. We study the architecture of the greatest founder pitches in history — not to mimic their style, but to extract their Persuasion DNA.
         </div>
       </div>
+
+      <div class="grid-3">
+
+        <!-- Card 1 -->
+        <div class="phil-card">
+          <div class="card-num">01</div>
+          <div class="card-icon">✦</div>
+          <div style="font-family:var(--font-mono);font-size:8px;color:var(--text-light);margin-bottom:8px;letter-spacing:0.14em;">ICON PLACEHOLDER · 52×52px · Abstract geometric</div>
+          <div class="wf-h3">The Origin Myth</div>
+          <div class="wf-body" style="font-size:9px;margin-top:6px;">Turning your "Why" into a competitive advantage. The moment your company was made inevitable — before the first line of code.</div>
+          <div class="card-tag">Narrative Architecture</div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="phil-card">
+          <div class="card-num">02</div>
+          <div class="card-icon">◈</div>
+          <div style="font-family:var(--font-mono);font-size:8px;color:var(--text-light);margin-bottom:8px;letter-spacing:0.14em;">ICON PLACEHOLDER · 52×52px · Abstract geometric</div>
+          <div class="wf-h3">The Data Story Bridge</div>
+          <div class="wf-body" style="font-size:9px;margin-top:6px;">Making cold numbers feel like a warm invitation to growth. Every metric becomes confirmation of a thesis they already half-believe.</div>
+          <div class="card-tag">Evidence Choreography</div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="phil-card">
+          <div class="card-num">03</div>
+          <div class="card-icon">△</div>
+          <div style="font-family:var(--font-mono);font-size:8px;color:var(--text-light);margin-bottom:8px;letter-spacing:0.14em;">ICON PLACEHOLDER · 52×52px · Abstract geometric</div>
+          <div class="wf-h3">The Visionary Landing</div>
+          <div class="wf-body" style="font-size:9px;margin-top:6px;">Closing with a statement that makes passing on you feel like a mistake. They don't say yes to you — they say yes to themselves.</div>
+          <div class="card-tag">Decision Architecture</div>
+        </div>
+
+      </div>
+
+      <div class="wf-note" style="display:block;margin-top:14px;">Icons: abstract geometric SVGs — NOT literal. Radial / triangular / grid forms. Rounded square container.</div>
       <div class="section-divider"></div>
-      <div style="font-family:var(--font-mono);font-size:9px;color:var(--wire-text-lighter);">📐 50/50 · right side: 5:4 two-image grid with rounded corners · dark green label badge overlaid on main image</div>
+      <div class="spec-bar">📐 3 equal cols · each card rounded 20px · icon top · H3 · body · pill tag bottom · hover: subtle shadow lift</div>
     </div>
   </div>
 
-  <!-- ─── §4 SERVICES ─── -->
+
+  <!-- ─── §4 PAIN POINTS ─── -->
   <div class="wf-section dark-bg" id="s4">
-    <div class="wf-section-label">§4 · SERVICES SECTION</div>
-    <div class="wf-section-note">50/50 split · service list left · visual panel right · dark bg</div>
-    <div style="height:16px;"></div>
-    <div class="wf-section-inner" style="background:rgba(0,0,0,0.04);">
-      <div class="split-50-50" style="align-items:start;">
-        <!-- Left: services list -->
-        <div>
-          <div class="wf-eyebrow">WHAT WE DO</div>
-          <div class="wf-h2" style="margin-top:8px;">"Our <span style='background:var(--wire-accent);color:white;padding:1px 6px;border-radius:4px;'>Services</span>" <span class="wf-h2-tag">H2 · title has green highlight chip</span></div>
-          <div class="wf-p" style="margin:12px 0 24px;">
-            <div class="wf-p-line full"></div>
-            <div class="wf-p-line med"></div>
-          </div>
-          <!-- Service rows -->
-          <div class="wf-service-row">
-            <span class="wf-service-num">01</span>
-            <div class="wf-service-name"></div>
-            <div class="wf-service-arrow">→</div>
-          </div>
-          <div class="wf-service-row">
-            <span class="wf-service-num">02</span>
-            <div class="wf-service-name"></div>
-            <div class="wf-service-arrow">→</div>
-          </div>
-          <div class="wf-service-row">
-            <span class="wf-service-num">03</span>
-            <div class="wf-service-name"></div>
-            <div class="wf-service-arrow">→</div>
-          </div>
-          <div class="wf-service-row">
-            <span class="wf-service-num">04</span>
-            <div class="wf-service-name"></div>
-            <div class="wf-service-arrow">→</div>
-          </div>
-          <div class="wf-annot">Each row: number · name · arrow circle button · hover turns arrow green</div>
-        </div>
-        <!-- Right: visual panel -->
-        <div style="position:relative;">
-          <div class="wf-img" style="height:460px;border-radius:16px;background:var(--wire-fill-dark);">
-            <div class="wf-img-label">DESIGNER PERSON</div>
-            <div class="wf-img-size">Dark panel · illustrated designer · abstract lines</div>
-          </div>
-          <div class="wf-badge light" style="position:absolute;top:20px;right:20px;flex-direction:column;align-items:flex-end;gap:2px;z-index:2;">
-            <div style="font-size:9px;">Ever wondered how</div>
-            <div style="font-size:9px;">design magic happens?</div>
-            <div style="font-size:8px;color:var(--wire-accent);">See how we work ↗</div>
-          </div>
-          <div class="wf-badge accent" style="position:absolute;bottom:20px;right:20px;z-index:2;">Meet our expert ↗</div>
-          <div class="wf-annot">2 floating badges on visual panel · top-right info card · bottom-right green CTA</div>
-        </div>
-      </div>
-      <div class="section-divider" style="background:rgba(0,0,0,0.1);"></div>
-      <div style="font-family:var(--font-mono);font-size:9px;color:var(--wire-text-light);">📐 Dark section · Left: eyebrow + H2 (green chip on word) + paragraph + 4 numbered rows · Right: tall visual + 2 overlaid badges</div>
-    </div>
-  </div>
-
-  <!-- ─── §5 MARQUEE ─── -->
-  <div class="wf-section dark-bg" id="s5">
-    <div class="wf-section-label">§5 · MARQUEE STRIP</div>
-    <div class="wf-section-note">Full-width auto-scrolling text · dark bg · "Innovate ✦ Inspire ✦ Create"</div>
-    <div style="height:16px;"></div>
-    <div class="wf-section-inner" style="padding:0;">
-      <div class="wf-marquee-strip">
-        <div class="wf-marquee-items">
-          <div class="wf-marquee-item"></div>
-          <div class="wf-marquee-item"></div>
-          <div class="wf-marquee-item"></div>
-          <div class="wf-marquee-item"></div>
-          <div class="wf-marquee-item"></div>
-          <div class="wf-marquee-item"></div>
-        </div>
-      </div>
-    </div>
-    <div style="padding:8px 32px 12px;font-family:var(--font-mono);font-size:9px;color:var(--wire-text-lighter);">
-      Infinite horizontal scroll animation · Large display font (36px bold) · Words separated by ✦ green icon · Loops seamlessly
-    </div>
-  </div>
-
-  <!-- ─── §6 TEAM ─── -->
-  <div class="wf-section dark-bg" id="s6">
-    <div class="wf-section-label">§6 · MEET THE TEAM</div>
-    <div class="wf-section-note">Section title row + "Join" button · 3×2 card grid · dark bg</div>
-    <div style="height:16px;"></div>
-    <div class="wf-section-inner" style="background:rgba(0,0,0,0.04);">
-      <!-- Header row -->
-      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;">
-        <div class="wf-h2">"Meet <span style='background:var(--wire-accent);color:white;padding:1px 6px;border-radius:4px;'>the Team</span>" <span class="wf-h2-tag">H2 · green chip</span></div>
-        <div class="wf-btn outline" style="width:140px;border-radius:99px;height:36px;font-size:9px;">[ JOIN THE CLUB → ]</div>
-      </div>
-      <div class="wf-rule">Section header: H2 left · "Join the Club" pill button right — on same row</div>
-      <!-- 3×2 grid -->
-      <div class="grid-3" style="margin-top:16px;">
-        <div class="wf-team-card">
-          <div class="wf-team-num">01</div>
-          <div class="wf-icon avatar" style="margin-bottom:12px;"></div>
-          <div class="wf-h3">TEAM MEMBER NAME</div>
-          <div style="height:8px;width:100px;background:var(--wire-accent);border-radius:10px;opacity:0.5;margin:6px 0 10px;"></div>
-          <div class="wf-p"><div class="wf-p-line full"></div><div class="wf-p-line med"></div></div>
-        </div>
-        <div class="wf-team-card">
-          <div class="wf-team-num">02</div>
-          <div class="wf-icon avatar" style="margin-bottom:12px;"></div>
-          <div class="wf-h3">TEAM MEMBER NAME</div>
-          <div style="height:8px;width:120px;background:var(--wire-accent);border-radius:10px;opacity:0.5;margin:6px 0 10px;"></div>
-          <div class="wf-p"><div class="wf-p-line full"></div><div class="wf-p-line med"></div></div>
-        </div>
-        <div class="wf-team-card">
-          <div class="wf-team-num">03</div>
-          <div class="wf-icon avatar" style="margin-bottom:12px;"></div>
-          <div class="wf-h3">TEAM MEMBER NAME</div>
-          <div style="height:8px;width:90px;background:var(--wire-accent);border-radius:10px;opacity:0.5;margin:6px 0 10px;"></div>
-          <div class="wf-p"><div class="wf-p-line full"></div><div class="wf-p-line med"></div></div>
-        </div>
-        <div class="wf-team-card">
-          <div class="wf-team-num">04</div>
-          <div class="wf-icon avatar" style="margin-bottom:12px;"></div>
-          <div class="wf-h3">TEAM MEMBER NAME</div>
-          <div style="height:8px;width:80px;background:var(--wire-accent);border-radius:10px;opacity:0.5;margin:6px 0 10px;"></div>
-          <div class="wf-p"><div class="wf-p-line full"></div><div class="wf-p-line med"></div></div>
-        </div>
-        <div class="wf-team-card">
-          <div class="wf-team-num">05</div>
-          <div class="wf-icon avatar" style="margin-bottom:12px;"></div>
-          <div class="wf-h3">TEAM MEMBER NAME</div>
-          <div style="height:8px;width:110px;background:var(--wire-accent);border-radius:10px;opacity:0.5;margin:6px 0 10px;"></div>
-          <div class="wf-p"><div class="wf-p-line full"></div><div class="wf-p-line med"></div></div>
-        </div>
-        <div class="wf-team-card">
-          <div class="wf-team-num">06</div>
-          <div class="wf-icon avatar" style="margin-bottom:12px;"></div>
-          <div class="wf-h3">TEAM MEMBER NAME</div>
-          <div style="height:8px;width:95px;background:var(--wire-accent);border-radius:10px;opacity:0.5;margin:6px 0 10px;"></div>
-          <div class="wf-p"><div class="wf-p-line full"></div><div class="wf-p-line med"></div></div>
-        </div>
-      </div>
-      <div class="section-divider" style="background:rgba(0,0,0,0.1);"></div>
-      <div style="font-family:var(--font-mono);font-size:9px;color:var(--wire-text-light);">📐 Dark bg · 3×2 card grid · each card: avatar circle + numbered badge (top-right) + name + role (green) + 2-line bio</div>
-    </div>
-  </div>
-
-  <!-- ─── §7 TESTIMONIALS ─── -->
-  <div class="wf-section" id="s7">
-    <div class="wf-section-label">§7 · TESTIMONIALS</div>
-    <div class="wf-section-note">2-col card grid · off-white bg · quote + name + stars</div>
-    <div style="height:16px;"></div>
+    <div class="wf-section-label">§4 · PAIN POINTS</div>
+    <div class="wf-section-note">Centered H2 · 2×2 rounded card grid · circle warning icons · callout pill</div>
+    <div style="height:24px;"></div>
     <div class="wf-section-inner">
-      <div class="wf-h2" style="margin-bottom:32px;">"What Our Clients Say" <span class="wf-h2-tag">H2 · Left-aligned</span></div>
-      <div class="grid-2">
-        <div class="wf-testi-card">
-          <div class="wf-icon avatar" style="width:44px;height:44px;margin-bottom:14px;"></div>
-          <div class="wf-p" style="margin-bottom:16px;">
-            <div class="wf-p-line full"></div>
-            <div class="wf-p-line full"></div>
-            <div class="wf-p-line full"></div>
-            <div class="wf-p-line med"></div>
-          </div>
-          <div style="display:flex;align-items:center;justify-content:space-between;">
-            <div>
-              <div class="wf-h3" style="height:16px;background:var(--wire-fill-darkest);width:120px;"></div>
-              <div style="height:7px;width:90px;background:var(--wire-border);border-radius:10px;margin-top:6px;"></div>
-            </div>
-            <div style="font-family:var(--font-mono);font-size:11px;color:var(--wire-accent);">★★★★★</div>
-          </div>
+
+      <div style="text-align:center;margin-bottom:36px;">
+        <div class="wf-h2 centered">"Why Brilliant Founders Still Fumble the Pitch"</div>
+      </div>
+
+      <div class="grid-2x2">
+
+        <div class="pain-card">
+          <div class="pain-badge">⚠ PATTERN 01</div>
+          <div class="pain-icon-circle">⚠</div>
+          <div class="wf-h3">The "Curse of Knowledge"</div>
+          <div class="wf-body" style="font-size:9px;margin-top:6px;">You are too deep in the weeds. You explain the "how" before they care about the "why." Founders repeat themselves — thinking if they don't, nobody will understand.</div>
         </div>
-        <div class="wf-testi-card">
-          <div class="wf-icon avatar" style="width:44px;height:44px;margin-bottom:14px;"></div>
-          <div class="wf-p" style="margin-bottom:16px;">
-            <div class="wf-p-line full"></div>
-            <div class="wf-p-line full"></div>
-            <div class="wf-p-line full"></div>
-            <div class="wf-p-line med"></div>
-          </div>
-          <div style="display:flex;align-items:center;justify-content:space-between;">
-            <div>
-              <div class="wf-h3" style="height:16px;background:var(--wire-fill-darkest);width:110px;"></div>
-              <div style="height:7px;width:80px;background:var(--wire-border);border-radius:10px;margin-top:6px;"></div>
-            </div>
-            <div style="font-family:var(--font-mono);font-size:11px;color:var(--wire-accent);">★★★★★</div>
-          </div>
+
+        <div class="pain-card">
+          <div class="pain-badge">⚠ PATTERN 02</div>
+          <div class="pain-icon-circle">⚠</div>
+          <div class="wf-h3">The Defensive Crouch</div>
+          <div class="wf-body" style="font-size:9px;margin-top:6px;">Treating investor questions like an interrogation instead of a consultation. Every challenge becomes a threat to defend, not an invitation to lead.</div>
+        </div>
+
+        <div class="pain-card">
+          <div class="pain-badge">⚠ PATTERN 03</div>
+          <div class="pain-icon-circle">⚠</div>
+          <div class="wf-h3">Feature-Dumping</div>
+          <div class="wf-body" style="font-size:9px;margin-top:6px;">Selling tools instead of outcomes. Passion without a business case is just a hobby. Features are forgotten; transformations are funded.</div>
+        </div>
+
+        <div class="pain-card">
+          <div class="pain-badge">⚠ PATTERN 04</div>
+          <div class="pain-icon-circle">⚠</div>
+          <div class="wf-h3">The Confidence Gap</div>
+          <div class="wf-body" style="font-size:9px;margin-top:6px;">If you don't sound like you've already won, they won't bet on you to win. Hesitation is expensive. Unreasonable certainty is investable.</div>
+        </div>
+
+      </div>
+
+      <!-- Full-width rounded callout -->
+      <div class="callout-box">
+        <div class="callout-icon">⬟</div>
+        <div style="flex:1;">
+          <div class="wf-h3" style="font-size:10px;margin-bottom:6px;">The Anti-Group Promise — Max 10 Founders Per Quarter</div>
+          <div class="wf-body" style="font-size:9px;">We don't have time to be on a call with 10 other people. We only onboard 10 founders &amp; under so we can accommodate different timezones and work in different timelines. Practical, application-based — not a classroom.</div>
         </div>
       </div>
+      <div class="wf-annot">Callout: rounded card · sits outside grid · full-width · dark outline border</div>
+
       <div class="section-divider"></div>
-      <div style="font-family:var(--font-mono);font-size:9px;color:var(--wire-text-lighter);">📐 2-col grid · white card with rounded corners · avatar circle top · quote lines · name + role + 5-star rating</div>
+      <div class="spec-bar">📐 2×2 equal rounded cards · circle ⚠ icon · badge pill top-right · full-width callout card at bottom</div>
     </div>
   </div>
 
-  <!-- ─── §8 SKILLS TICKER ─── -->
-  <div class="wf-section" id="s8">
-    <div class="wf-section-label">§8 · SKILLS TICKER STRIP</div>
-    <div class="wf-section-note">Thin horizontal scroll · skill tags · off-white bg · subtle</div>
-    <div style="height:16px;"></div>
-    <div class="wf-section-inner" style="padding:0;">
-      <div class="wf-ticker-strip">
-        <div class="wf-ticker-item"><div class="wf-ticker-dot"></div><div class="wf-ticker-text"></div></div>
-        <div class="wf-ticker-item"><div class="wf-ticker-dot"></div><div class="wf-ticker-text" style="width:50px;"></div></div>
-        <div class="wf-ticker-item"><div class="wf-ticker-dot"></div><div class="wf-ticker-text" style="width:70px;"></div></div>
-        <div class="wf-ticker-item"><div class="wf-ticker-dot"></div><div class="wf-ticker-text" style="width:55px;"></div></div>
-        <div class="wf-ticker-item"><div class="wf-ticker-dot"></div><div class="wf-ticker-text" style="width:80px;"></div></div>
-        <div class="wf-ticker-item"><div class="wf-ticker-dot"></div><div class="wf-ticker-text" style="width:48px;"></div></div>
-        <div class="wf-ticker-item"><div class="wf-ticker-dot"></div><div class="wf-ticker-text" style="width:65px;"></div></div>
-        <div class="wf-ticker-item"><div class="wf-ticker-dot"></div><div class="wf-ticker-text" style="width:52px;"></div></div>
+
+  <!-- ─── §5 PROCESS ─── -->
+  <div class="wf-section" id="s5">
+    <div class="wf-section-label">§5 · HIGH-STAKES DIPLOMACY</div>
+    <div class="wf-section-note">Centered H2 · vertical timeline · circle nodes · connector line · pill tags</div>
+    <div style="height:24px;"></div>
+    <div class="wf-section-inner">
+
+      <div style="text-align:center;margin-bottom:48px;">
+        <div class="wf-h2 centered">"This Isn't 'Public Speaking.' It's High-Stakes Diplomacy."</div>
       </div>
-    </div>
-    <div style="padding:8px 32px 12px;font-family:var(--font-mono);font-size:9px;color:var(--wire-text-lighter);">
-      Green dot · skill name · repeating scroll animation · top + bottom 1px border · items muted by default / brighten on hover
+
+      <div class="timeline">
+        <div class="tl-line"></div>
+
+        <div class="tl-step">
+          <div class="tl-node">I</div>
+          <div class="tl-content">
+            <div class="tl-step-label">Step 1 · Foundation</div>
+            <div class="wf-h3" style="font-size:11px;">The Audit</div>
+            <div class="wf-body" style="font-size:9.5px;margin-top:8px;">We record you "cold." We find the verbal fillers, the logic gaps, and the moments where your authority leaks. Before we can rebuild, we must know exactly where the cracks are.</div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;">
+              <div class="tl-pill">Pitch Recording Review</div>
+              <div class="tl-pill">Investor Objection Map</div>
+              <div class="tl-pill">Narrative Gap Analysis</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-step">
+          <div class="tl-node">II</div>
+          <div class="tl-content">
+            <div class="tl-step-label">Step 2 · Construction</div>
+            <div class="wf-h3" style="font-size:11px;">The Architecture</div>
+            <div class="wf-body" style="font-size:9.5px;margin-top:8px;">I teach you the Pivot Strategy: How to turn a "No" into a "Not yet" and a "How?" into a "Watch us." We build the full narrative sequence — Origin Myth, Data Bridge, Visionary Landing.</div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;">
+              <div class="tl-pill">Narrative Sequencing</div>
+              <div class="tl-pill">Q&amp;A War Games</div>
+              <div class="tl-pill">Room Reading Drills</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-step">
+          <div class="tl-node">III</div>
+          <div class="tl-content">
+            <div class="tl-step-label">Step 3 · Execution</div>
+            <div class="wf-h3" style="font-size:11px;">The Stress Test</div>
+            <div class="wf-body" style="font-size:9.5px;margin-top:8px;">High-intensity mock board meetings. We simulate the toughest rooms you'll ever enter until your delivery is unshakable. We don't stop until your answers are reflexive — not rehearsed.</div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;">
+              <div class="tl-pill">Live Partner Simulations</div>
+              <div class="tl-pill">Pre-Meeting Briefing</div>
+              <div class="tl-pill">Post-Meeting Debrief</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-divider"></div>
+      <div class="spec-bar">📐 Vertical timeline · circle nodes (48px) with shadow · gradient connector line · pill label + pill tags · white bg</div>
     </div>
   </div>
 
-  <!-- ─── §9 CONTACT / CTA ─── -->
-  <div class="wf-section dark-bg" id="s9">
-    <div class="wf-section-label">§9 · CONTACT / GET IN TOUCH</div>
-    <div class="wf-section-note">50/50 split · text + email form left · illustrated person right · dark bg</div>
-    <div style="height:16px;"></div>
-    <div class="wf-section-inner" style="background:rgba(0,0,0,0.04);">
-      <div class="split-50-50" style="align-items:center;">
-        <!-- Left -->
-        <div style="padding-right:20px;">
-          <div class="wf-h1" style="height:80px;">H2 — "Get in Touch Today!" <span class="wf-h1-tag">H2 · Large · White text on dark</span></div>
-          <div class="wf-p" style="margin:14px 0 28px;">
-            <div class="wf-p-line full"></div>
-            <div class="wf-p-line full"></div>
-            <div class="wf-p-line med"></div>
-          </div>
-          <div class="wf-email-form">
-            <div class="wf-email-input"></div>
-            <div class="wf-btn green-fill" style="width:110px;height:44px;font-size:9px;flex-shrink:0;">[ CONNECT → ]</div>
-          </div>
-          <div class="wf-annot">Email input pill + green submit button · inline row · max-width ~440px</div>
-          <div class="wf-note" style="margin-top:8px;">Input: dark bg, pill border-radius, placeholder text · Button: green fill, pill shape</div>
+
+  <!-- ─── §6 AUTHORITY ─── -->
+  <div class="wf-section dark-bg" id="s6">
+    <div class="wf-section-label">§6 · WHY TRAIN WITH US</div>
+    <div class="wf-section-note">40/60 split · rounded blockquote left · circle check items right</div>
+    <div style="height:24px;"></div>
+    <div class="wf-section-inner">
+
+      <div class="split-40-60" style="align-items:center;min-height:280px;">
+
+        <!-- LEFT — Blockquote -->
+        <div style="padding-right:40px;">
+          <div class="wf-eyebrow">Why Train With Us</div>
+          <div class="wf-quote">"Because Capital Follows Conviction"</div>
+          <div class="wf-annot">Large decorative quote · rounded card · acts as visual anchor for section</div>
         </div>
-        <!-- Right: person -->
-        <div class="wf-img" style="height:380px;border-radius:20px;background:var(--wire-fill-dark);">
-          <div class="wf-img-label">CONTACT PERSON</div>
-          <div class="wf-img-size">Person with OK sign · dark panel bg · green decorative elements</div>
+
+        <!-- RIGHT — Checklist -->
+        <div style="padding-left:20px;">
+          <div class="check-item">
+            <div class="check-circle">✓</div>
+            <div class="check-body">
+              <div class="wf-h3" style="font-size:10px;">Executive-Specific Expertise</div>
+              <div class="wf-body" style="font-size:9px;margin-top:5px;">I don't coach "presenters." I coach leaders. I understand the nuances of fundraising, board management, and internal buy-in.</div>
+            </div>
+          </div>
+          <div class="check-item">
+            <div class="check-circle">✓</div>
+            <div class="check-body">
+              <div class="wf-h3" style="font-size:10px;">ROI-Driven Feedback</div>
+              <div class="wf-body" style="font-size:9px;margin-top:5px;">Every session is geared toward a specific outcome: a closed round, a signed partner, or a mobilized team. No vanity metrics.</div>
+            </div>
+          </div>
+          <div class="check-item">
+            <div class="check-circle">✓</div>
+            <div class="check-body">
+              <div class="wf-h3" style="font-size:10px;">Discreet &amp; Elite</div>
+              <div class="wf-body" style="font-size:9px;margin-top:5px;">Private coaching for founders who need to sharpen their edge without the noise of a public classroom. Max 10 founders per quarter.</div>
+            </div>
+          </div>
         </div>
+
       </div>
-      <div class="section-divider" style="background:rgba(0,0,0,0.1);"></div>
-      <div style="font-family:var(--font-mono);font-size:9px;color:var(--wire-text-light);">📐 Dark bg · 50/50 split · heading + body + email row left · illustrated figure right with rounded corners</div>
+
+      <div class="section-divider"></div>
+      <div class="spec-bar">📐 40/60 split · blockquote: rounded dark card · check items: circle icon + H3 + body · stacked right</div>
     </div>
   </div>
 
-  <!-- ─── §10 FOOTER ─── -->
-  <div class="wf-section" id="s10">
-    <div class="wf-section-label">§10 · FOOTER</div>
-    <div class="wf-section-note">Green bg · 5-col layout · brand + 3 link cols + newsletter · bottom bar</div>
-    <div style="height:16px;"></div>
-    <div class="wf-section-inner wf-footer-bg" style="background:var(--wire-accent);padding:40px 32px 24px;">
-      <!-- 5-col top -->
-      <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr 2fr;gap:36px;padding-bottom:36px;border-bottom:1px solid rgba(0,0,0,0.15);margin-bottom:24px;">
-        <!-- Brand -->
-        <div>
-          <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px;">
-            <div style="width:22px;height:22px;border-radius:50%;background:rgba(0,0,0,0.25);"></div>
-            <div style="height:14px;width:60px;background:rgba(0,0,0,0.3);border-radius:2px;"></div>
-          </div>
-          <div class="wf-footer-link full"></div>
-          <div class="wf-footer-link med"></div>
-          <div class="wf-footer-link short"></div>
+
+  <!-- ─── §7 CLOSING CTA ─── -->
+  <div class="wf-section" id="s7">
+    <div class="wf-section-label">§7 · CLOSING CTA</div>
+    <div class="wf-section-note">Full-width rounded dark section · centered text · single CTA pill</div>
+    <div style="height:24px;"></div>
+    <div class="wf-section-inner" style="padding-bottom:40px;">
+
+      <div class="closing-dark">
+        <div style="font-family:var(--font-mono);font-size:8px;color:rgba(255,255,255,0.2);letter-spacing:0.2em;margin-bottom:20px;">FULL-WIDTH · DARK ROUNDED SECTION · ALL CONTENT CENTERED</div>
+
+        <div class="opt-tag" style="background:rgba(122,96,32,0.25);color:rgba(220,180,80,0.9);">Option 1</div>
+        <div style="font-family:var(--font-mono);font-size:18px;font-weight:500;color:var(--white);line-height:1.3;margin:8px auto 12px;max-width:520px;">
+          "Don't Leave Your Exit to Chance."
         </div>
-        <!-- Col 2 -->
-        <div>
-          <div class="wf-footer-col-title"></div>
-          <div class="wf-footer-link full"></div>
-          <div class="wf-footer-link med"></div>
-          <div class="wf-footer-link full"></div>
-          <div class="wf-footer-link short"></div>
+        <div style="font-family:var(--font-mono);font-size:9.5px;color:rgba(255,255,255,0.5);line-height:1.8;max-width:480px;margin:0 auto 28px;text-align:center;">
+          When you walk into that VC office or onto that keynote stage, the pressure is immense. You shouldn't be wondering if your message will land; you should be wondering how much equity you're willing to give up.
         </div>
-        <!-- Col 3 -->
-        <div>
-          <div class="wf-footer-col-title"></div>
-          <div class="wf-footer-link full"></div>
-          <div class="wf-footer-link med"></div>
-          <div class="wf-footer-link full"></div>
-          <div class="wf-footer-link med"></div>
+
+        <div style="height:1px;background:rgba(255,255,255,0.1);max-width:360px;margin:0 auto 28px;border-radius:1px;"></div>
+
+        <div class="opt-tag" style="background:rgba(122,96,32,0.25);color:rgba(220,180,80,0.9);">Option 2 — Recommended</div>
+        <div style="font-family:var(--font-mono);font-size:20px;font-weight:500;color:var(--white);line-height:1.25;margin:8px auto 14px;max-width:520px;">
+          "Picture This Moment."
         </div>
-        <!-- Col 4 -->
-        <div>
-          <div class="wf-footer-col-title"></div>
-          <div class="wf-footer-link full"></div>
-          <div class="wf-footer-link short"></div>
-          <div class="wf-footer-link med"></div>
-          <div class="wf-footer-link full"></div>
+        <div style="font-family:var(--font-mono);font-size:9.5px;color:rgba(255,255,255,0.5);line-height:1.85;max-width:500px;margin:0 auto 10px;text-align:center;">
+          The lead investor leans back and asks the "impossible" question about your burn rate or competition. While other founders would stammer, you smile — because we've rehearsed this exact pivot 20 times.
         </div>
-        <!-- Newsletter -->
-        <div>
-          <div class="wf-footer-col-title" style="width:80%;"></div>
-          <div class="wf-footer-link full"></div>
-          <div class="wf-footer-link med"></div>
-          <div style="display:flex;gap:6px;margin-top:10px;">
-            <div style="flex:1;height:34px;background:rgba(0,0,0,0.12);border-radius:99px;"></div>
-            <div style="width:64px;height:34px;background:rgba(0,0,0,0.3);border-radius:99px;"></div>
-          </div>
+        <div style="font-family:var(--font-mono);font-size:10.5px;color:rgba(255,255,255,0.75);font-weight:500;margin:0 auto 8px;max-width:480px;text-align:center;">
+          You don't just answer. You lead.
         </div>
+        <div style="font-family:var(--font-mono);font-size:9.5px;color:rgba(255,255,255,0.4);line-height:1.8;max-width:480px;margin:0 auto 36px;text-align:center;">
+          The room goes quiet. They aren't looking at your slides anymore; they're looking at you. That's the moment the deal is done.
+        </div>
+
+        <div style="display:flex;justify-content:center;">
+          <div class="wf-btn" style="width:300px;background:rgba(255,255,255,0.12);border:1.5px solid rgba(255,255,255,0.22);border-radius:var(--radius-pill);">[ APPLY NOW — CONFIDENTIAL ]</div>
+        </div>
+        <div style="font-family:var(--font-mono);font-size:8px;color:rgba(255,255,255,0.18);text-align:center;margin-top:14px;">7 spots available · 100% confidential · Response within 48 hours</div>
       </div>
-      <!-- Bottom bar -->
-      <div style="display:flex;align-items:center;justify-content:space-between;">
-        <div style="height:8px;width:160px;background:rgba(0,0,0,0.2);border-radius:10px;"></div>
-        <div style="height:8px;width:200px;background:rgba(0,0,0,0.15);border-radius:10px;"></div>
-      </div>
-    </div>
-    <div style="padding:8px 32px 12px;font-family:var(--font-mono);font-size:9px;color:var(--wire-text-lighter);">
-      📐 GREEN bg (#7fff00 shade) · 5 columns: [brand + desc] [Company] [Support] [Resources] [Newsletter + submit] · bottom: copyright left / tagline right
+
+      <div class="wf-opt" style="display:inline-flex;margin-top:14px;">Option 2 "Picture This Moment" recommended — more cinematic, narrative, emotionally resonant.</div>
     </div>
   </div>
 
-  <!-- spec notes -->
-  <div style="margin-top:28px;padding:16px 24px;border:1px dashed var(--wire-border);background:var(--wire-fill);font-family:var(--font-mono);font-size:9px;color:var(--wire-text-light);line-height:1.9;">
-    <strong style="display:block;margin-bottom:8px;letter-spacing:0.12em;color:var(--wire-text);">DESIGN SPEC — DESKTOP 1440px</strong>
-    🍭 Pill Nav: position:fixed · top:20px · centered · max-width:860px · black bg · border-radius:99px · 3-col grid<br>
-    🎨 Color: Black #0a0a0a · Off-white #f5f5f0 · Green #7fff00 · Grey text #888<br>
-    🔤 Fonts: Syne (Display/Headings, 800w) · Instrument Sans (Body, 300–500w)<br>
-    📏 H1: 52–64px · H2: 36–48px · H3: 18–22px · Body: 15px · Label: 11px 0.15em<br>
-    ⬛ Dark sections: Stats, Services, Marquee, Team, Contact<br>
-    ⬜ Light sections: Hero, About, Testimonials, Ticker<br>
-    🟩 Footer: Green bg (#7fff00 muted) · black text on green<br>
-    ↔ Content max-width: 1200px · 60px side padding
+  <!-- Spec footer -->
+  <div style="margin-top:24px;padding:18px 24px;border:1.5px dashed var(--border);border-radius:var(--radius-card);background:var(--white);font-family:var(--font-mono);font-size:9px;color:var(--text-mid);line-height:1.95;">
+    <strong style="display:block;margin-bottom:10px;letter-spacing:0.12em;color:var(--text);">GLOBAL DESIGN SPEC — DESKTOP 1440px · CURVY SYSTEM</strong>
+    🔵 All elements: border-radius 20px (cards) · 999px (pills, buttons, nav, badges) · 10px (small chips)<br>
+    🍭 Pill Nav: fixed · centered · max-width 860px · dark fill · 3-col grid · shadow<br>
+    🎨 Palette: Deep Charcoal #1A1A1A · Slate Grey · Crisp White · Gold accent #C9A96E<br>
+    🔤 Fonts: Playfair Display (H1/H2 display) · Cormorant Garamond (quotes) · DM Sans (body 300–400w)<br>
+    📏 H1: 56–72px · H2: 40–48px · H3: 20–24px · Body: 15–16px · Label: 10px pill tags<br>
+    ⚫ Dark bg sections: Hero, Pain Points, Authority, Closing CTA<br>
+    ⚪ Light bg sections: Comparison, Philosophy, Process<br>
+    ↔ Content max-width: 1200px · 60px side padding · ↕ Sections: 80–120px vertical padding
   </div>
 
 </div>
-</div><!-- /view-desktop -->
+</div><!-- /desktop -->
 
 
-<!-- ════════════════════════════════════
-     MOBILE VIEW
-════════════════════════════════════ -->
+<!-- ══════════════════════════ MOBILE ══════════════════════════ -->
 <div id="view-mobile" class="view">
 <div class="wf-page">
 
-  <!-- MOBILE PILL NAV (simplified) -->
-  <div style="background:var(--wire-fill-darkest);border-radius:99px;height:48px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;margin-bottom:10px;">
+  <!-- MOBILE PILL NAV -->
+  <div style="background:var(--fill-darkest);border-radius:var(--radius-pill);height:50px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;margin-bottom:12px;box-shadow:0 4px 16px rgba(0,0,0,0.15);">
     <div style="width:28px;height:28px;display:flex;flex-direction:column;justify-content:space-between;padding:4px 0;">
       <div style="height:2px;background:rgba(255,255,255,0.4);border-radius:2px;"></div>
       <div style="height:2px;background:rgba(255,255,255,0.4);border-radius:2px;width:70%;"></div>
       <div style="height:2px;background:rgba(255,255,255,0.4);border-radius:2px;"></div>
     </div>
-    <div class="pill-nav-logo" style="font-size:13px;">
-      <div class="pill-nav-starburst" style="width:16px;height:16px;font-size:8px;">✳</div>
-      Creatix
-    </div>
+    <div class="nav-center" style="font-size:12px;"><div class="nav-star" style="width:18px;height:18px;font-size:9px;">✦</div> Meridian &amp; Co.</div>
     <div style="width:28px;"></div>
   </div>
-  <div class="wf-note" style="margin-bottom:12px;">MOBILE PILL NAV · Pill shape · Logo centered · Hamburger left · Symmetrical padding</div>
+  <div class="wf-note" style="display:block;margin-bottom:10px;">MOBILE PILL NAV · Logo centered · Hamburger left · border-radius 999px</div>
 
-  <!-- M §1: HERO -->
+  <!-- M §1 HERO -->
   <div class="wf-section">
     <div class="wf-section-label">§1 · HERO · MOBILE</div>
-    <div class="wf-section-note">Stacked: circle + person → headline → body → 2 CTAs</div>
-    <div style="height:16px;"></div>
-    <div class="wf-section-inner" style="padding:20px;">
-      <div class="wf-rule">MOBILE ORDER: Circle bg + Person portrait top → H1 → Body → CTA row</div>
-      <div style="position:relative;height:300px;margin-bottom:20px;display:flex;justify-content:center;align-items:flex-end;">
-        <div style="position:absolute;width:240px;height:240px;border-radius:50%;background:var(--wire-fill);bottom:0;left:50%;transform:translateX(-50%);"></div>
-        <div class="wf-img" style="width:180px;height:280px;border-radius:100px 100px 60px 60px;position:relative;z-index:1;background:var(--wire-fill-mid);">
-          <div class="wf-img-label">PERSON</div>
-        </div>
-        <div class="wf-badge" style="position:absolute;bottom:12px;right:16px;z-index:2;flex-direction:column;align-items:flex-start;gap:1px;padding:6px 10px;">
-          <span style="font-size:13px;font-weight:600;">10</span>
-          <span style="font-size:7px;opacity:0.6;">Years Exp.</span>
-        </div>
+    <div class="wf-section-note">Image top → H1 → body → pill CTA</div>
+    <div style="height:24px;"></div>
+    <div class="wf-section-inner">
+      <div class="wf-rule" style="display:block;margin-bottom:12px;">ORDER: Image → H1 → Sub-headline → Full-width pill CTA</div>
+      <div class="wf-img" style="height:250px;margin-bottom:18px;">
+        <div class="wf-img-label">B&amp;W PORTRAIT · TOP · Full width</div>
+        <div class="wf-img-note">4:3 crop on mobile · rounded corners</div>
       </div>
-      <div class="wf-h1" style="height:68px;margin-bottom:10px;">H1 — Main Headline Block</div>
-      <div class="wf-p" style="margin-bottom:16px;">
-        <div class="wf-p-line full"></div><div class="wf-p-line full"></div><div class="wf-p-line med"></div>
-      </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
-        <div class="wf-btn" style="font-size:8px;border-radius:99px;">[ START PROJECT ]</div>
-        <div class="wf-btn outline" style="font-size:8px;border-radius:99px;">[ COLLABORATE → ]</div>
-      </div>
-      <div class="wf-annot">CTAs stay side-by-side in 2-col on mobile (equal width)</div>
+      <div class="wf-eyebrow" style="font-size:8px;">✦ &nbsp; Invitation Only · Series A &amp; B Founders</div>
+      <div class="wf-h1" style="margin-bottom:10px;">"Your Series A Isn't Won in the Slides. It's Won in the Q&amp;A."</div>
+      <div class="wf-body" style="font-size:9px;margin-bottom:18px;">A great product opens the door. But the founder's vision? That's what writes the check. Build the high-stakes communication skills that scale companies.</div>
+      <div class="wf-btn full">[ APPLY NOW → ] — FULL WIDTH PILL</div>
+      <div class="wf-annot">Button fills full container width · pill shape preserved on mobile</div>
     </div>
   </div>
 
-  <!-- M §2: STATS -->
-  <div class="wf-section dark-bg">
-    <div class="wf-section-label">§2 · STATS · MOBILE</div>
-    <div class="wf-section-note">2×2 grid (4 stats)</div>
-    <div style="height:16px;"></div>
-    <div class="wf-section-inner" style="padding:0;">
-      <div class="wf-rule" style="margin:0 0 0;">MOBILE: 4-col collapses → 2×2 grid</div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;">
-        <div class="wf-stat" style="border-bottom:1px solid rgba(255,255,255,0.08);">
-          <div class="wf-stat-num"></div><div class="wf-stat-label"></div>
-        </div>
-        <div class="wf-stat" style="border-bottom:1px solid rgba(255,255,255,0.08);">
-          <div class="wf-stat-num"></div><div class="wf-stat-label"></div>
-        </div>
-        <div class="wf-stat"><div class="wf-stat-num"></div><div class="wf-stat-label"></div></div>
-        <div class="wf-stat"><div class="wf-stat-num"></div><div class="wf-stat-label"></div></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- M §3: ABOUT -->
+  <!-- M §2 COMPARISON -->
   <div class="wf-section">
-    <div class="wf-section-label">§3 · ABOUT · MOBILE</div>
-    <div class="wf-section-note">Stacked: headline → body → badge → images below</div>
-    <div style="height:16px;"></div>
-    <div class="wf-section-inner" style="padding:20px;">
-      <div class="wf-h2" style="max-width:100%;margin-bottom:12px;">H2 — Headline</div>
-      <div class="wf-p" style="margin-bottom:12px;">
-        <div class="wf-p-line full"></div><div class="wf-p-line full"></div><div class="wf-p-line med"></div>
-      </div>
-      <div class="wf-badge" style="display:inline-flex;margin-bottom:16px;font-size:8px;">A CREATIVE DESIGN AGENCY</div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
-        <div class="wf-img" style="height:200px;border-radius:10px;"><div class="wf-img-label" style="font-size:8px;">TEAM IMG</div></div>
-        <div class="wf-img" style="height:200px;border-radius:10px;"><div class="wf-img-label" style="font-size:8px;">PERSON</div></div>
-      </div>
-      <div class="wf-annot">Images stay side-by-side in equal 2-col on mobile</div>
-    </div>
-  </div>
+    <div class="wf-section-label">§2 · COMPARISON · MOBILE</div>
+    <div class="wf-section-note">H2 → Card 1 → Card 2 stacked · both rounded</div>
+    <div style="height:24px;"></div>
+    <div class="wf-section-inner">
+      <div class="wf-h2" style="max-width:100%;margin-bottom:14px;">"The Demo Day Trap vs. Your 1:1 Private Edge"</div>
+      <div class="wf-rule" style="display:block;margin-bottom:10px;">MOBILE: 2 cards stack vertically · Card 2 keeps emphasis</div>
 
-  <!-- M §4: SERVICES -->
-  <div class="wf-section dark-bg">
-    <div class="wf-section-label">§4 · SERVICES · MOBILE</div>
-    <div class="wf-section-note">Stacked: header → service rows → visual panel below</div>
-    <div style="height:16px;"></div>
-    <div class="wf-section-inner" style="padding:20px;background:rgba(0,0,0,0.04);">
-      <div class="wf-rule">MOBILE: 50/50 split collapses → service list on top, visual below</div>
-      <div class="wf-eyebrow" style="margin-bottom:8px;">WHAT WE DO</div>
-      <div class="wf-h2" style="max-width:100%;margin-bottom:12px;">H2 — "Our Services"</div>
-      <div class="wf-p" style="margin-bottom:14px;">
-        <div class="wf-p-line full"></div><div class="wf-p-line med"></div>
+      <div style="border:1.5px solid var(--border);border-radius:var(--radius-card);padding:18px;margin-bottom:10px;background:var(--white);">
+        <div class="wf-h3" style="font-size:9px;margin-bottom:10px;">⊘ &nbsp;The Generic Workshop</div>
+        <div style="font-family:var(--font-mono);font-size:9px;color:var(--text-mid);line-height:1.75;padding-left:14px;border-left:2px solid var(--fill-mid);">
+          <div style="margin-bottom:6px;"><span class="cx">✕</span>&nbsp; One-size-fits-all pitch scripts.</div>
+          <div style="margin-bottom:6px;"><span class="cx">✕</span>&nbsp; You're one of 50 founders in a cohort.</div>
+          <div><span class="cx">✕</span>&nbsp; Surface-level feedback on "deck design."</div>
+        </div>
       </div>
-      <div class="wf-service-row"><span class="wf-service-num">01</span><div class="wf-service-name"></div><div class="wf-service-arrow">→</div></div>
-      <div class="wf-service-row"><span class="wf-service-num">02</span><div class="wf-service-name"></div><div class="wf-service-arrow">→</div></div>
-      <div class="wf-service-row"><span class="wf-service-num">03</span><div class="wf-service-name"></div><div class="wf-service-arrow">→</div></div>
-      <div class="wf-service-row"><span class="wf-service-num">04</span><div class="wf-service-name"></div><div class="wf-service-arrow">→</div></div>
-      <div class="wf-img" style="height:220px;border-radius:14px;margin-top:16px;background:var(--wire-fill-dark);">
-        <div class="wf-img-label">SERVICES VISUAL</div>
-        <div class="wf-badge accent" style="position:absolute;bottom:14px;right:14px;font-size:8px;z-index:2;">Meet our expert ↗</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- M §5: MARQUEE -->
-  <div class="wf-section dark-bg">
-    <div class="wf-section-label">§5 · MARQUEE · MOBILE</div>
-    <div class="wf-section-note">Same as desktop — full-width scroll strip</div>
-    <div style="height:16px;"></div>
-    <div class="wf-section-inner" style="padding:0;">
-      <div class="wf-marquee-strip" style="padding:14px 0;">
-        <div class="wf-marquee-items">
-          <div class="wf-marquee-item" style="height:20px;"></div>
-          <div class="wf-marquee-item" style="height:20px;"></div>
-          <div class="wf-marquee-item" style="height:20px;"></div>
-          <div class="wf-marquee-item" style="height:20px;"></div>
+      <div style="border:2.5px solid var(--fill-darkest);border-radius:var(--radius-card);padding:18px;background:var(--white);position:relative;">
+        <div style="position:absolute;top:-1px;left:20px;right:20px;text-align:center;background:var(--fill-darkest);color:var(--white);font-family:var(--font-mono);font-size:7px;padding:2px 10px;border-radius:var(--radius-pill);letter-spacing:0.14em;">RECOMMENDED — THICKER BORDER</div>
+        <div style="height:14px;"></div>
+        <div class="wf-h3" style="font-size:9px;margin-bottom:10px;">✦ &nbsp;Your 1:1 Private Edge</div>
+        <div style="font-family:var(--font-mono);font-size:9px;color:var(--text);line-height:1.75;padding-left:14px;border-left:2px solid var(--green);font-weight:500;">
+          <div style="margin-bottom:6px;"><span class="ck">✓</span>&nbsp; Frameworks built around your "Founder DNA."</div>
+          <div style="margin-bottom:6px;"><span class="ck">✓</span>&nbsp; Deep-dive sessions focused solely on your roadmap.</div>
+          <div><span class="ck">✓</span>&nbsp; Iterative drills on "Aggressive Investor" Q&amp;A.</div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- M §6: TEAM -->
-  <div class="wf-section dark-bg">
-    <div class="wf-section-label">§6 · TEAM · MOBILE</div>
-    <div class="wf-section-note">2-col card grid (3×2 becomes 2-col scroll)</div>
-    <div style="height:16px;"></div>
-    <div class="wf-section-inner" style="padding:20px;background:rgba(0,0,0,0.04);">
-      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:8px;">
-        <div class="wf-h2" style="max-width:100%;margin-bottom:0;">H2 — Meet the Team</div>
-        <div class="wf-btn outline" style="width:120px;border-radius:99px;height:32px;font-size:8px;">[ JOIN → ]</div>
-      </div>
-      <div class="wf-rule">MOBILE: 3×2 grid → 2-col grid (3 rows of 2)</div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
-        <div class="wf-team-card" style="padding:16px;">
-          <div class="wf-team-num" style="width:20px;height:20px;font-size:8px;">1</div>
-          <div class="wf-icon avatar" style="width:40px;height:40px;margin-bottom:8px;"></div>
-          <div class="wf-h3" style="height:20px;font-size:8px;"></div>
-          <div style="height:6px;width:60px;background:var(--wire-accent);border-radius:10px;opacity:0.5;margin:5px 0 8px;"></div>
-          <div class="wf-p" style="padding:6px 8px;"><div class="wf-p-line full"></div><div class="wf-p-line med"></div></div>
-        </div>
-        <div class="wf-team-card" style="padding:16px;">
-          <div class="wf-team-num" style="width:20px;height:20px;font-size:8px;">2</div>
-          <div class="wf-icon avatar" style="width:40px;height:40px;margin-bottom:8px;"></div>
-          <div class="wf-h3" style="height:20px;font-size:8px;"></div>
-          <div style="height:6px;width:55px;background:var(--wire-accent);border-radius:10px;opacity:0.5;margin:5px 0 8px;"></div>
-          <div class="wf-p" style="padding:6px 8px;"><div class="wf-p-line full"></div><div class="wf-p-line med"></div></div>
-        </div>
-        <div class="wf-team-card" style="padding:16px;">
-          <div class="wf-team-num" style="width:20px;height:20px;font-size:8px;">3</div>
-          <div class="wf-icon avatar" style="width:40px;height:40px;margin-bottom:8px;"></div>
-          <div class="wf-h3" style="height:20px;font-size:8px;"></div>
-          <div style="height:6px;width:70px;background:var(--wire-accent);border-radius:10px;opacity:0.5;margin:5px 0 8px;"></div>
-          <div class="wf-p" style="padding:6px 8px;"><div class="wf-p-line full"></div><div class="wf-p-line med"></div></div>
-        </div>
-        <div class="wf-team-card" style="padding:16px;">
-          <div class="wf-team-num" style="width:20px;height:20px;font-size:8px;">4</div>
-          <div class="wf-icon avatar" style="width:40px;height:40px;margin-bottom:8px;"></div>
-          <div class="wf-h3" style="height:20px;font-size:8px;"></div>
-          <div style="height:6px;width:48px;background:var(--wire-accent);border-radius:10px;opacity:0.5;margin:5px 0 8px;"></div>
-          <div class="wf-p" style="padding:6px 8px;"><div class="wf-p-line full"></div><div class="wf-p-line med"></div></div>
-        </div>
-      </div>
-      <div class="wf-annot">Remaining 2 cards continue below in same 2-col grid</div>
-    </div>
-  </div>
-
-  <!-- M §7: TESTIMONIALS -->
+  <!-- M §3 PHILOSOPHY -->
   <div class="wf-section">
-    <div class="wf-section-label">§7 · TESTIMONIALS · MOBILE</div>
-    <div class="wf-section-note">Stacked single column cards</div>
-    <div style="height:16px;"></div>
-    <div class="wf-section-inner" style="padding:20px;">
-      <div class="wf-h2" style="max-width:100%;margin-bottom:16px;">H2 — "What Our Clients Say"</div>
-      <div class="wf-rule">MOBILE: 2-col cards → single column stack</div>
-      <div style="display:flex;flex-direction:column;gap:10px;">
-        <div class="wf-testi-card">
-          <div class="wf-icon avatar" style="width:36px;height:36px;margin-bottom:10px;"></div>
-          <div class="wf-p"><div class="wf-p-line full"></div><div class="wf-p-line full"></div><div class="wf-p-line med"></div></div>
-          <div style="display:flex;justify-content:space-between;margin-top:12px;">
-            <div style="height:8px;width:80px;background:var(--wire-border);border-radius:10px;"></div>
-            <div style="font-family:var(--font-mono);font-size:10px;color:var(--wire-accent);">★★★★★</div>
+    <div class="wf-section-label">§3 · PERSUASION DNA · MOBILE</div>
+    <div class="wf-section-note">H2 → intro → icon-left + text-right rows</div>
+    <div style="height:24px;"></div>
+    <div class="wf-section-inner">
+      <div class="wf-h2" style="max-width:100%;margin-bottom:10px;">"What do Steve Jobs and Sara Blakely have in common?"</div>
+      <div class="wf-body" style="font-size:9px;margin-bottom:18px;">They didn't just sell products; they sold a future that felt inevitable...</div>
+      <div class="wf-rule" style="display:block;margin-bottom:12px;">MOBILE: 3-col grid → icon LEFT · H3 + text RIGHT per row</div>
+
+      <div style="display:flex;gap:14px;align-items:flex-start;margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid var(--fill-light);">
+        <div style="width:40px;height:40px;border:1.5px dashed var(--border-mid);border-radius:var(--radius-sm);background:var(--fill-light);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px;color:var(--border-mid);">✦</div>
+        <div>
+          <div class="wf-h3" style="font-size:9px;margin-bottom:5px;">The Origin Myth</div>
+          <div class="wf-body" style="font-size:8.5px;">Turning your "Why" into a competitive advantage.</div>
+          <div class="card-tag" style="margin-top:8px;">Narrative Architecture</div>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:14px;align-items:flex-start;margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid var(--fill-light);">
+        <div style="width:40px;height:40px;border:1.5px dashed var(--border-mid);border-radius:var(--radius-sm);background:var(--fill-light);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px;color:var(--border-mid);">◈</div>
+        <div>
+          <div class="wf-h3" style="font-size:9px;margin-bottom:5px;">The Data Story Bridge</div>
+          <div class="wf-body" style="font-size:8.5px;">Making cold numbers feel like a warm invitation to growth.</div>
+          <div class="card-tag" style="margin-top:8px;">Evidence Choreography</div>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:14px;align-items:flex-start;">
+        <div style="width:40px;height:40px;border:1.5px dashed var(--border-mid);border-radius:var(--radius-sm);background:var(--fill-light);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px;color:var(--border-mid);">△</div>
+        <div>
+          <div class="wf-h3" style="font-size:9px;margin-bottom:5px;">The Visionary Landing</div>
+          <div class="wf-body" style="font-size:8.5px;">Closing with a statement that makes passing on you feel like a mistake.</div>
+          <div class="card-tag" style="margin-top:8px;">Decision Architecture</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- M §4 PAIN POINTS -->
+  <div class="wf-section dark-bg">
+    <div class="wf-section-label">§4 · PAIN POINTS · MOBILE</div>
+    <div class="wf-section-note">H2 → 4 rounded cards single col → callout</div>
+    <div style="height:24px;"></div>
+    <div class="wf-section-inner">
+      <div class="wf-h2" style="max-width:100%;margin-bottom:14px;">"Why Brilliant Founders Still Fumble"</div>
+      <div class="wf-rule" style="display:block;margin-bottom:10px;">MOBILE: 2×2 grid → single column · cards keep rounded corners</div>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <div class="pain-card"><div class="pain-badge">⚠ 01</div><div class="pain-icon-circle">⚠</div><div class="wf-h3" style="font-size:9px;">The "Curse of Knowledge"</div><div class="wf-body" style="font-size:8.5px;margin-top:5px;">You explain the "how" before they care about the "why." Founders repeat — thinking if they don't, nobody will understand.</div></div>
+        <div class="pain-card"><div class="pain-badge">⚠ 02</div><div class="pain-icon-circle">⚠</div><div class="wf-h3" style="font-size:9px;">The Defensive Crouch</div><div class="wf-body" style="font-size:8.5px;margin-top:5px;">Treating investor questions like an interrogation instead of a consultation.</div></div>
+        <div class="pain-card"><div class="pain-badge">⚠ 03</div><div class="pain-icon-circle">⚠</div><div class="wf-h3" style="font-size:9px;">Feature-Dumping</div><div class="wf-body" style="font-size:8.5px;margin-top:5px;">Selling tools instead of outcomes. Passion without a business case is just a hobby.</div></div>
+        <div class="pain-card"><div class="pain-badge">⚠ 04</div><div class="pain-icon-circle">⚠</div><div class="wf-h3" style="font-size:9px;">The Confidence Gap</div><div class="wf-body" style="font-size:8.5px;margin-top:5px;">If you don't sound like you've already won, they won't bet on you to win.</div></div>
+        <div class="callout-box" style="padding:14px 18px;">
+          <div class="callout-icon" style="width:36px;height:36px;font-size:14px;">⬟</div>
+          <div><div class="wf-h3" style="font-size:8.5px;margin-bottom:4px;">The Anti-Group Promise</div><div class="wf-body" style="font-size:8px;">Max 10 founders. Different timezones. Practical, application-based.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- M §5 PROCESS -->
+  <div class="wf-section">
+    <div class="wf-section-label">§5 · PROCESS · MOBILE</div>
+    <div class="wf-section-note">H2 → vertical left-rail timeline · circle nodes</div>
+    <div style="height:24px;"></div>
+    <div class="wf-section-inner">
+      <div class="wf-h2" style="max-width:100%;margin-bottom:20px;">"High-Stakes Diplomacy — 3 Steps"</div>
+      <div class="wf-rule" style="display:block;margin-bottom:14px;">MOBILE: Horizontal steps → vertical left-rail timeline</div>
+
+      <div class="vt-step">
+        <div class="vt-left">
+          <div class="tl-node" style="width:40px;height:40px;font-size:11px;">I</div>
+          <div class="vt-line-v"></div>
+        </div>
+        <div style="flex:1;padding-top:4px;">
+          <div class="tl-step-label" style="font-size:7px;padding:2px 8px;">Step 1 · Foundation</div>
+          <div class="wf-h3" style="font-size:9px;margin:6px 0;">The Audit</div>
+          <div class="wf-body" style="font-size:8.5px;">We record you "cold." We find the verbal fillers, the logic gaps, and the moments where your authority leaks.</div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:8px;">
+            <div class="tl-pill" style="font-size:7px;">Recording Review</div>
+            <div class="tl-pill" style="font-size:7px;">Objection Map</div>
           </div>
         </div>
-        <div class="wf-testi-card">
-          <div class="wf-icon avatar" style="width:36px;height:36px;margin-bottom:10px;"></div>
-          <div class="wf-p"><div class="wf-p-line full"></div><div class="wf-p-line full"></div><div class="wf-p-line med"></div></div>
-          <div style="display:flex;justify-content:space-between;margin-top:12px;">
-            <div style="height:8px;width:80px;background:var(--wire-border);border-radius:10px;"></div>
-            <div style="font-family:var(--font-mono);font-size:10px;color:var(--wire-accent);">★★★★★</div>
+      </div>
+
+      <div class="vt-step">
+        <div class="vt-left">
+          <div class="tl-node" style="width:40px;height:40px;font-size:11px;">II</div>
+          <div class="vt-line-v"></div>
+        </div>
+        <div style="flex:1;padding-top:4px;">
+          <div class="tl-step-label" style="font-size:7px;padding:2px 8px;">Step 2 · Construction</div>
+          <div class="wf-h3" style="font-size:9px;margin:6px 0;">The Architecture</div>
+          <div class="wf-body" style="font-size:8.5px;">The Pivot Strategy: Turn a "No" into a "Not yet." Turn a "How?" into a "Watch us."</div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:8px;">
+            <div class="tl-pill" style="font-size:7px;">Narrative Sequencing</div>
+            <div class="tl-pill" style="font-size:7px;">Q&amp;A War Games</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="vt-step" style="margin-bottom:0;">
+        <div class="vt-left">
+          <div class="tl-node" style="width:40px;height:40px;font-size:11px;">III</div>
+        </div>
+        <div style="flex:1;padding-top:4px;">
+          <div class="tl-step-label" style="font-size:7px;padding:2px 8px;">Step 3 · Execution</div>
+          <div class="wf-h3" style="font-size:9px;margin:6px 0;">The Stress Test</div>
+          <div class="wf-body" style="font-size:8.5px;">High-intensity mock board meetings until your delivery is unshakable.</div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:8px;">
+            <div class="tl-pill" style="font-size:7px;">Live Simulations</div>
+            <div class="tl-pill" style="font-size:7px;">Pre-Meeting Briefing</div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- M §8: TICKER -->
-  <div class="wf-section">
-    <div class="wf-section-label">§8 · TICKER · MOBILE</div>
-    <div class="wf-section-note">Same as desktop — unchanged</div>
-    <div style="height:16px;"></div>
-    <div class="wf-section-inner" style="padding:0;">
-      <div class="wf-ticker-strip">
-        <div class="wf-ticker-item"><div class="wf-ticker-dot"></div><div class="wf-ticker-text"></div></div>
-        <div class="wf-ticker-item"><div class="wf-ticker-dot"></div><div class="wf-ticker-text" style="width:50px;"></div></div>
-        <div class="wf-ticker-item"><div class="wf-ticker-dot"></div><div class="wf-ticker-text" style="width:40px;"></div></div>
-        <div class="wf-ticker-item"><div class="wf-ticker-dot"></div><div class="wf-ticker-text" style="width:55px;"></div></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- M §9: CONTACT -->
+  <!-- M §6 AUTHORITY -->
   <div class="wf-section dark-bg">
-    <div class="wf-section-label">§9 · CONTACT · MOBILE</div>
-    <div class="wf-section-note">Stacked: headline → body → email form → person below</div>
-    <div style="height:16px;"></div>
-    <div class="wf-section-inner" style="padding:20px;background:rgba(0,0,0,0.04);">
-      <div class="wf-rule">MOBILE: 50/50 split collapses → text + form stacked above image</div>
-      <div class="wf-h1" style="height:60px;margin-bottom:10px;">H2 — "Get in Touch Today!"</div>
-      <div class="wf-p" style="margin-bottom:14px;">
-        <div class="wf-p-line full"></div><div class="wf-p-line full"></div><div class="wf-p-line med"></div>
+    <div class="wf-section-label">§6 · AUTHORITY · MOBILE</div>
+    <div class="wf-section-note">Blockquote top full-width → 3 check items stacked</div>
+    <div style="height:24px;"></div>
+    <div class="wf-section-inner">
+      <div class="wf-rule" style="display:block;margin-bottom:12px;">MOBILE: 40/60 split → blockquote full-width top · items stack below</div>
+      <div class="wf-quote" style="font-size:13px;text-align:center;margin-bottom:20px;">"Because Capital Follows Conviction"</div>
+      <div class="check-item">
+        <div class="check-circle">✓</div>
+        <div class="check-body"><div class="wf-h3" style="font-size:9px;">Executive-Specific Expertise</div><div class="wf-body" style="font-size:8.5px;margin-top:4px;">Fundraising, board management, internal buy-in. Leaders — not presenters.</div></div>
       </div>
-      <div class="wf-email-form" style="margin-bottom:16px;">
-        <div class="wf-email-input"></div>
-        <div class="wf-btn green-fill" style="width:90px;height:44px;font-size:8px;flex-shrink:0;">[ GO → ]</div>
+      <div class="check-item">
+        <div class="check-circle">✓</div>
+        <div class="check-body"><div class="wf-h3" style="font-size:9px;">ROI-Driven Feedback</div><div class="wf-body" style="font-size:8.5px;margin-top:4px;">Every session → closed round, signed partner, or mobilized team.</div></div>
       </div>
-      <div class="wf-img" style="height:240px;border-radius:16px;background:var(--wire-fill-dark);">
-        <div class="wf-img-label">CONTACT PERSON</div>
+      <div class="check-item">
+        <div class="check-circle">✓</div>
+        <div class="check-body"><div class="wf-h3" style="font-size:9px;">Discreet &amp; Elite</div><div class="wf-body" style="font-size:8.5px;margin-top:4px;">Private coaching. No public classroom. Maximum 10 founders per quarter.</div></div>
       </div>
     </div>
   </div>
 
-  <!-- M §10: FOOTER -->
+  <!-- M §7 CTA -->
   <div class="wf-section">
-    <div class="wf-section-label">§10 · FOOTER · MOBILE</div>
-    <div class="wf-section-note">Green bg · stacked columns · 2-col link groups</div>
-    <div style="height:16px;"></div>
-    <div class="wf-section-inner wf-footer-bg" style="background:var(--wire-accent);padding:28px 20px 20px;">
-      <div class="wf-rule" style="margin-bottom:14px;">MOBILE: 5-col grid → Brand stacked top · 2×2 link columns · newsletter full-width</div>
-      <!-- Brand -->
-      <div style="margin-bottom:20px;">
-        <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
-          <div style="width:18px;height:18px;border-radius:50%;background:rgba(0,0,0,0.25);"></div>
-          <div style="height:12px;width:50px;background:rgba(0,0,0,0.3);border-radius:2px;"></div>
+    <div class="wf-section-label">§7 · CLOSING CTA · MOBILE</div>
+    <div class="wf-section-note">Rounded dark card · centered · text fills width · pill CTA</div>
+    <div style="height:24px;"></div>
+    <div class="wf-section-inner" style="padding-bottom:24px;">
+      <div class="closing-dark" style="padding:40px 24px;">
+        <div style="font-family:var(--font-mono);font-size:16px;font-weight:500;color:var(--white);margin-bottom:14px;line-height:1.3;">"Picture This Moment."</div>
+        <div style="font-family:var(--font-mono);font-size:9px;color:rgba(255,255,255,0.45);line-height:1.85;margin-bottom:10px;">
+          The lead investor asks the "impossible" question. While other founders stammer, you smile — because we've rehearsed this pivot 20 times.
         </div>
-        <div class="wf-footer-link full"></div>
-        <div class="wf-footer-link med"></div>
-      </div>
-      <!-- 2x2 link cols -->
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px;">
-        <div><div class="wf-footer-col-title"></div><div class="wf-footer-link full"></div><div class="wf-footer-link med"></div><div class="wf-footer-link short"></div></div>
-        <div><div class="wf-footer-col-title"></div><div class="wf-footer-link full"></div><div class="wf-footer-link med"></div><div class="wf-footer-link full"></div></div>
-        <div><div class="wf-footer-col-title"></div><div class="wf-footer-link full"></div><div class="wf-footer-link short"></div><div class="wf-footer-link med"></div></div>
-        <div></div>
-      </div>
-      <!-- Newsletter full-width -->
-      <div style="margin-bottom:20px;">
-        <div class="wf-footer-col-title" style="width:60%;"></div>
-        <div style="display:flex;gap:6px;margin-top:8px;">
-          <div style="flex:1;height:34px;background:rgba(0,0,0,0.12);border-radius:99px;"></div>
-          <div style="width:56px;height:34px;background:rgba(0,0,0,0.3);border-radius:99px;"></div>
+        <div style="font-family:var(--font-mono);font-size:10px;color:rgba(255,255,255,0.75);font-weight:500;margin-bottom:24px;">
+          You don't just answer. You lead.
         </div>
+        <div class="wf-btn full" style="background:rgba(255,255,255,0.12);border:1.5px solid rgba(255,255,255,0.2);border-radius:var(--radius-pill);">[ APPLY NOW — FULL WIDTH ]</div>
+        <div style="font-family:var(--font-mono);font-size:8px;color:rgba(255,255,255,0.2);text-align:center;margin-top:10px;">Text fills full width on mobile · no max-width constraint</div>
       </div>
-      <div style="height:1px;background:rgba(0,0,0,0.15);margin-bottom:14px;"></div>
-      <div style="height:7px;width:140px;background:rgba(0,0,0,0.2);border-radius:10px;"></div>
     </div>
   </div>
 
   <!-- Mobile spec -->
-  <div style="margin-top:20px;padding:14px 16px;border:1px dashed var(--wire-border);background:var(--wire-fill);font-family:var(--font-mono);font-size:9px;color:var(--wire-text-light);line-height:1.9;">
-    <strong style="display:block;margin-bottom:8px;letter-spacing:0.12em;color:var(--wire-text);">MOBILE SPEC (390px)</strong>
-    📱 Breakpoint: ≤768px<br>
-    🍭 Pill nav: centered logo · hamburger icon left · no inline links<br>
-    📐 §1 Hero: person image top → H1 → body → 2 CTAs (equal 2-col)<br>
-    📊 §2 Stats: 4-col → 2×2 grid<br>
-    🖼 §3 About: text stacked → images stay 2-col<br>
-    📋 §4 Services: list above visual panel (stacked)<br>
-    👥 §6 Team: 3×2 → 2-col grid<br>
-    💬 §7 Testi: 2-col → single column<br>
-    📩 §9 Contact: text + form above image (stacked)<br>
-    🟩 §10 Footer: 5-col → brand top + 2×2 links + newsletter full-width
+  <div style="margin-top:20px;padding:16px 18px;border:1.5px dashed var(--border);border-radius:var(--radius-card);background:var(--white);font-family:var(--font-mono);font-size:9px;color:var(--text-mid);line-height:1.95;">
+    <strong style="display:block;margin-bottom:8px;letter-spacing:0.12em;color:var(--text);">MOBILE SPEC (390px) — CURVY SYSTEM</strong>
+    📱 Breakpoint ≤768px · Padding: 16–20px<br>
+    🍭 All rounded corners preserved on mobile · pills stay pill-shaped<br>
+    📷 §1: portrait TOP → pill eyebrow → H1 → body → full-width pill CTA<br>
+    📋 §2: rounded cards stack · Card 2 keeps thick border + pill label badge<br>
+    🧩 §3: icon (rounded square) LEFT + text RIGHT per row · horizontal<br>
+    📊 §4: 2×2 rounded cards → single column stack<br>
+    ⏱ §5: steps → vertical left-rail timeline · circle nodes preserved<br>
+    💬 §6: rounded quote card top · circle check items below<br>
+    🔲 §7: rounded dark card · text fills width · pill CTA full width
   </div>
 
 </div>
-</div><!-- /view-mobile -->
+</div><!-- /mobile -->
 
 <script>
   function switchView(view, tabEl) {
